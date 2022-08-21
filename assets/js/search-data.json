@@ -13,7 +13,7 @@
   
     
         ,"post1": {
-            "title": "First Python Python Notebook",
+            "title": "First Python Jupyter Notebook",
             "content": "print(&quot;Hello&quot;) . Hello .",
             "url": "https://dontran15.github.io/CSAFastPages/jupyter/python/fastpages/2022/08/19/python-nb.html",
             "relUrl": "/jupyter/python/fastpages/2022/08/19/python-nb.html",
@@ -24,7 +24,7 @@
   
     
         ,"post2": {
-            "title": "First Python Java Notebook",
+            "title": "First Java Jupyter Notebook",
             "content": "System.out.println(&quot;Hello&quot;); . Hello .",
             "url": "https://dontran15.github.io/CSAFastPages/jupyter/java/fastpages/2022/08/19/java-nb.html",
             "relUrl": "/jupyter/java/fastpages/2022/08/19/java-nb.html",
