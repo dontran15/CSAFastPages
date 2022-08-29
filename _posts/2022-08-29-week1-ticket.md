@@ -1,3 +1,13 @@
+---
+toc: true
+layout: post
+description: Week 0 Ticket
+comments: false
+author: Don Tran
+categories: [markdown, fastpages, week 1]
+title: Week 1 Ticket
+---
+
 # Week 1 Assignment and Hacks: Innovation - Primitives
 
 ## Canvas Requirements

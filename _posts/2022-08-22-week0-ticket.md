@@ -1,3 +1,13 @@
+---
+toc: true
+layout: post
+description: Week 0 Ticket
+comments: false
+author: Don Tran
+categories: [markdown, fastpages, week 0]
+title: Week 0 Ticket
+---
+
 ## Hacks Part 1
 
 - [Link to Personal Fastpages / Github pages running on github.io](https://dontran15.github.io/CSAFastPages/)
