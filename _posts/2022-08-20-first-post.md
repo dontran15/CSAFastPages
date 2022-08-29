@@ -6,6 +6,7 @@ comments: false
 author: Don Tran
 categories: [markdown, fastpages]
 title: My First Post!
+image: image/blog.jpeg 
 ---
 
 ### First Fastpages Post 😎🥱

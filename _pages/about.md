@@ -4,8 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+# About Me
 
+Hey! Welcome to my fastpages! I'm Don Tran and I'm a junior at Del Norte High School. I like playing piano and drinking boba. I like learning and probably am planning to go into some CS field. Anyways very cool 😈😈[^1].
 
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+[^1]: so awesome! 😎😎
