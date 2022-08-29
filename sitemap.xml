@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://dontran15.github.io/CSAFastPages/markdown/2020/01/14/test-markdown-post.html</loc>
-<lastmod>2020-01-14T00:00:00-06:00</lastmod>
-</url>
-<url>
-<loc>https://dontran15.github.io/CSAFastPages/jupyter/2020/02/20/test.html</loc>
-<lastmod>2020-02-20T00:00:00-06:00</lastmod>
-</url>
-<url>
-<loc>https://dontran15.github.io/CSAFastPages/jupyter/java/fastpages/2022/08/19/java-nb.html</loc>
+<loc>https://dontran15.github.io/CSAFastPages/jupyter/java/fastpages/week%200/2022/08/19/java-nb.html</loc>
 <lastmod>2022-08-19T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://dontran15.github.io/CSAFastPages/jupyter/python/fastpages/2022/08/19/python-nb.html</loc>
+<loc>https://dontran15.github.io/CSAFastPages/jupyter/python/fastpages/week%200/2022/08/19/python-nb.html</loc>
 <lastmod>2022-08-19T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://dontran15.github.io/CSAFastPages/markdown/fastpages/2022/08/20/first-post.html</loc>
+<loc>https://dontran15.github.io/CSAFastPages/markdown/fastpages/week%200/2022/08/20/first-post.html</loc>
 <lastmod>2022-08-20T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://dontran15.github.io/CSAFastPages/java/primitives/2022/08/23/primitives.html</loc>
+<loc>https://dontran15.github.io/CSAFastPages/java/primitives/week%201/2022/08/23/primitives.html</loc>
 <lastmod>2022-08-23T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://dontran15.github.io/CSAFastPages/java/bash/week%201/2022/08/24/bash.html</loc>
+<lastmod>2022-08-24T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://dontran15.github.io/CSAFastPages/java/object-oriented/primitives/2022/08/26/polynomial-integral-calculator.html</loc>
@@ -30,6 +26,9 @@
 </url>
 <url>
 <loc>https://dontran15.github.io/CSAFastPages/about/</loc>
+</url>
+<url>
+<loc>https://dontran15.github.io/CSAFastPages/_pages/college-board-notes.html</loc>
 </url>
 <url>
 <loc>https://dontran15.github.io/CSAFastPages/</loc>
