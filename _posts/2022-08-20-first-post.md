@@ -4,7 +4,7 @@ layout: post
 description: My first post using markdown on my fastpages. Coping through the struggles.
 comments: false
 author: Don Tran
-categories: [markdown, fastpages, week 0]
+categories: [markdown, fastpages, week 0, pbl]
 title: My First Post!
 image: images/blog.jpeg
 ---
