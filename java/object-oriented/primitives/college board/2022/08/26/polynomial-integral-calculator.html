@@ -209,7 +209,7 @@ window.onload = wrap_img;
       <span class="kt">int</span> <span class="n">pIndexNeg</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">"-"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
       <span class="kt">int</span> <span class="n">pIndex</span> <span class="o">=</span> <span class="n">pIndexPos</span><span class="p">;</span>
 
-      <span class="k">if</span> <span class="p">(</span><span class="n">pIndexNeg</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">pIndexNeg</span> <span class="o">&lt;</span> <span class="n">pIndexPos</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">pIndexNeg</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">pIndexNeg</span> <span class="o">&lt;</span> <span class="n">pIndexPos</span> <span class="o">||</span> <span class="n">pIndex</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
         <span class="n">pIndex</span> <span class="o">=</span> <span class="n">pIndexNeg</span><span class="p">;</span>
         <span class="n">nextCoeffSign</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
       <span class="p">}</span>
@@ -319,7 +319,7 @@ window.onload = wrap_img;
 <pre>Type your polynomial: must be single variable (x) polynomial with no spaces and all terms with powers specified {Ex: -5x^4+10x^1-2x^0}
 Type the lower bound of the integral
 Type the upper bound of the integral
-109.1111111117665
+24.664495904173325
 </pre>
 </div>
 </div>
