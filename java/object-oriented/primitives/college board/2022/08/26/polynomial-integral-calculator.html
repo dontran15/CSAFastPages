@@ -284,12 +284,15 @@ window.onload = wrap_img;
 
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Type your polynomial: must be single variable (x) polynomial with no spaces and all terms with powers specified {Ex: -5x^4+10x^1-2x^0}"</span><span class="p">);</span>
     <span class="n">String</span> <span class="n">input</span> <span class="o">=</span> <span class="n">userInput</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Polynomial Function: "</span> <span class="o">+</span> <span class="n">input</span><span class="p">);</span>
 
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Type the lower bound of the integral"</span><span class="p">);</span>
     <span class="kt">double</span> <span class="n">lowerBound</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">userInput</span><span class="p">.</span><span class="na">nextLine</span><span class="p">().</span><span class="na">trim</span><span class="p">());</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Lower Bound: "</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">lowerBound</span><span class="p">));</span>
 
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Type the upper bound of the integral"</span><span class="p">);</span>
     <span class="kt">double</span> <span class="n">upperBound</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">userInput</span><span class="p">.</span><span class="na">nextLine</span><span class="p">().</span><span class="na">trim</span><span class="p">());</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Higher Bound: "</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">upperBound</span><span class="p">));</span>
 
     <span class="n">userInput</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 
@@ -317,9 +320,12 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Type your polynomial: must be single variable (x) polynomial with no spaces and all terms with powers specified {Ex: -5x^4+10x^1-2x^0}
+Polynomial Function: -5x^4+10x^1
 Type the lower bound of the integral
+Lower Bound: 0.0
 Type the upper bound of the integral
-24.664495904173325
+Higher Bound: 2.0
+-12.000000000053387
 </pre>
 </div>
 </div>
