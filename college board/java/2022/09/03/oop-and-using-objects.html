@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Teddy Bear Factory - Code.org Learning | Don’s Fast Pages 💻</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Teddy Bear Factory - Code.org Learning" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using a Teddy Bear Factory to demonstrate my learning of OOP on Code.org" />
+<meta property="og:description" content="Using a Teddy Bear Factory to demonstrate my learning of OOP on Code.org" />
+<link rel="canonical" href="https://dontran15.github.io/CSAFastPages/college%20board/java/2022/09/03/oop-and-using-objects.html" />
+<meta property="og:url" content="https://dontran15.github.io/CSAFastPages/college%20board/java/2022/09/03/oop-and-using-objects.html" />
+<meta property="og:site_name" content="Don’s Fast Pages 💻" />
+<meta property="og:image" content="https://dontran15.github.io/CSAFastPages/images/teddybear.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-03T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://dontran15.github.io/CSAFastPages/images/teddybear.jpeg" />
+<meta property="twitter:title" content="Teddy Bear Factory - Code.org Learning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-03T00:00:00-05:00","datePublished":"2022-09-03T00:00:00-05:00","description":"Using a Teddy Bear Factory to demonstrate my learning of OOP on Code.org","headline":"Teddy Bear Factory - Code.org Learning","image":"https://dontran15.github.io/CSAFastPages/images/teddybear.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://dontran15.github.io/CSAFastPages/college%20board/java/2022/09/03/oop-and-using-objects.html"},"url":"https://dontran15.github.io/CSAFastPages/college%20board/java/2022/09/03/oop-and-using-objects.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSAFastPages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dontran15.github.io/CSAFastPages/feed.xml" title="Don's Fast Pages 💻" /><link rel="shortcut icon" type="image/x-icon" href="/CSAFastPages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CSAFastPages/">Don&#39;s Fast Pages 💻</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CSAFastPages/about/">Who Am I?? 🥸</a><a class="page-link" href="/CSAFastPages/_pages/college-board-notes.html">AP CSA College Board Notes</a><a class="page-link" href="/CSAFastPages/_pages/notes.html">AP CSA Notes</a><a class="page-link" href="/CSAFastPages/search/">Search</a><a class="page-link" href="/CSAFastPages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Teddy Bear Factory - Code.org Learning</h1><p class="page-description">Using a Teddy Bear Factory to demonstrate my learning of OOP on Code.org</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-03T00:00:00-05:00" itemprop="datePublished">
+        Sep 3, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/CSAFastPages/categories/#college board">college board</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/CSAFastPages/categories/#java">java</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/dontran15/CSAFastPages/tree/master/_notebooks/2022-09-03-oop-and-using-objects.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/CSAFastPages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/dontran15/CSAFastPages/master?filepath=_notebooks%2F2022-09-03-oop-and-using-objects.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSAFastPages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/dontran15/CSAFastPages/blob/master/_notebooks/2022-09-03-oop-and-using-objects.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSAFastPages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fdontran15%2FCSAFastPages%2Fblob%2Fmaster%2F_notebooks%2F2022-09-03-oop-and-using-objects.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/CSAFastPages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Object-Oriented-Programming">Object Oriented Programming </a></li>
+<li class="toc-entry toc-h2"><a href="#Factory">Factory </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Creating-a-Class-(Factory)">Creating a Class (Factory) </a></li>
+<li class="toc-entry toc-h3"><a href="#Variables-and-Constructor-(Factory-Data)">Variables and Constructor (Factory Data) </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Classes-Part-2-(Products-&-Product-Data)">Classes Part 2 (Products &amp; Product Data) </a></li>
+<li class="toc-entry toc-h4"><a href="#Inheritance-(Teddy-Bears)">Inheritance (Teddy Bears) </a></li>
+<li class="toc-entry toc-h4"><a href="#Creating-a-Factory!-(Instantiation)">Creating a Factory! (Instantiation) </a></li>
+<li class="toc-entry toc-h4"><a href="#Main-Method-(Production)">Main Method (Production) </a></li>
+<li class="toc-entry toc-h4"><a href="#More-Production">More Production </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Takeaways">Takeaways </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-09-03-oop-and-using-objects.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Object-Oriented-Programming">
+<a class="anchor" href="#Object-Oriented-Programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Object Oriented Programming<a class="anchor-link" href="#Object-Oriented-Programming"> </a>
+</h2>
+<p>Object Oriented Programming (abrreviated as OOP) is a coding paradigm (style in which code is organized) which organizes code into classes and objects.</p>
+<p>Java is one of the most popular and well known OOP based languages and is the language I'll use for my demonstration of my OOP learning.</p>
+<h2 id="Factory">
+<a class="anchor" href="#Factory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Factory<a class="anchor-link" href="#Factory"> </a>
+</h2>
+<p>I like to think of OOP as factories (commonly it's likened to blueprints but I like my analogy better &gt;:)</p>
+<p>Imagine you are an entrepreneur, fresh out of college (or maybe you dropped out) and you're ready to show the world your brilliant ideas and products.</p>
+<h3 id="Creating-a-Class-(Factory)">
+<a class="anchor" href="#Creating-a-Class-(Factory)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a Class (Factory)<a class="anchor-link" href="#Creating-a-Class-(Factory)"> </a>
+</h3>
+<p>Let's say you buy a factory. Here's your new factory:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Creates a class</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Factory</span><span class="p">{</span> 
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Variables-and-Constructor-(Factory-Data)">
+<a class="anchor" href="#Variables-and-Constructor-(Factory-Data)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variables and Constructor (Factory Data)<a class="anchor-link" href="#Variables-and-Constructor-(Factory-Data)"> </a>
+</h3>
+<p>Pretty empty huh. Let's try making a frame work to plan out your factory and statistics we'll need to keep track of as we obtain equipment and come up with what it's going to produce.</p>
+<p>To do this, we'll initialize variables, create a constructor, and make an empty function meant to be the instructions for what the factory needs to produce.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span> <span class="c1">//Import ArrayList class</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Factory</span><span class="p">{</span>
+  <span class="c1">//Initialize Variables: Variables for our generic Factory</span>
+  <span class="n">String</span> <span class="n">owner</span><span class="p">;</span>
+  <span class="kd">static</span> <span class="kt">double</span> <span class="n">factoryProfit</span><span class="p">;</span> <span class="c1">//static variable -&gt; belongs to class (our factories); the profit of our factories</span>
+
+  <span class="c1">//Constructer (more details later)</span>
+  <span class="kd">public</span> <span class="nf">Factory</span><span class="p">(</span><span class="n">String</span> <span class="n">owner</span><span class="p">){</span> 
+    <span class="c1">//When this constructer is called, we will have to fill out some info which will be assigned to our new factory's (object's) data</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">owner</span> <span class="o">=</span> <span class="n">owner</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">production</span><span class="p">(</span><span class="kt">int</span> <span class="n">days</span><span class="p">){</span> <span class="c1">//Function (return type: void); produces our product</span>
+    
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Classes-Part-2-(Products-&amp;-Product-Data)">
+<a class="anchor" href="#Classes-Part-2-(Products-&amp;-Product-Data)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classes Part 2 (Products &amp; Product Data)<a class="anchor-link" href="#Classes-Part-2-(Products-&amp;-Product-Data)"> </a>
+</h4>
+<p>Now, we can't just start your factory if it doesn't make anything. Let's say you decide on starting out with toy production.</p>
+<p>Let's create a toy class (our blueprint) to build toys!</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Create Toy class</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Toy</span><span class="p">{</span>
+  <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">materials</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="p">();</span>
+  <span class="kt">double</span> <span class="n">cost</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">price</span><span class="p">;</span>
+  <span class="c1">//Toy Constructor</span>
+  <span class="kd">public</span> <span class="nf">Toy</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">materials</span><span class="p">,</span> <span class="kt">double</span> <span class="n">cost</span><span class="p">,</span> <span class="kt">double</span> <span class="n">price</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">materials</span> <span class="o">=</span> <span class="n">materials</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">cost</span> <span class="o">=</span> <span class="n">cost</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">price</span> <span class="o">=</span> <span class="n">price</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">function</span><span class="p">(){</span> <span class="c1">//Function of the toy</span>
+    
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Inheritance-(Teddy-Bears)">
+<a class="anchor" href="#Inheritance-(Teddy-Bears)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inheritance (Teddy Bears)<a class="anchor-link" href="#Inheritance-(Teddy-Bears)"> </a>
+</h4>
+<p>Good work! We're almost there. As a suggestion, Teddy Bears are quite popular! Let's consider making that your first product.</p>
+<p>Below, let's create a child class that inherits its properties from our toy class! We call super to access the superclass's constructor.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//TeddyBear is a child class of the parent class Toy (inherits all of the variables and methods of Toy)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TeddyBear</span> <span class="kd">extends</span> <span class="n">Toy</span> <span class="p">{</span> 
+  <span class="c1">//Unique variable for TeddyBear</span>
+  <span class="n">String</span> <span class="n">color</span><span class="p">;</span>
+  <span class="c1">//TeddyBear constructor</span>
+  <span class="kd">public</span> <span class="nf">TeddyBear</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">materials</span><span class="p">,</span> <span class="kt">double</span> <span class="n">cost</span><span class="p">,</span> <span class="kt">double</span> <span class="n">price</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">){</span>
+    <span class="kd">super</span><span class="p">(</span><span class="n">materials</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">price</span><span class="p">);</span> <span class="c1">//super() references all the parent classes' constructors</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">function</span><span class="p">(){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Woah a teddy bear! It's "</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="s">" and gives great hugs!"</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="n">TeddyBear</span> <span class="nf">createBrownTeddyBear</span><span class="p">(){</span> <span class="c1">//Static method that instantiates (creates) a TeddyBear object w/ TeddyBear return type</span>
+    <span class="c1">//Specifies the materials, price, and cost of a a 'Brown' TeddyBear</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">materials</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">materials</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Cotton"</span><span class="p">);</span>
+    <span class="n">materials</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Mohair"</span><span class="p">);</span>
+    <span class="n">materials</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Ribbon"</span><span class="p">);</span>
+    <span class="n">materials</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Plastic Eyes"</span><span class="p">);</span>
+    <span class="kt">double</span> <span class="n">cost</span> <span class="o">=</span> <span class="mf">5.00</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">price</span> <span class="o">=</span> <span class="mf">10.00</span><span class="p">;</span>
+
+    <span class="c1">//Instantiates an object of itself (almost like a factory) and returns the object</span>
+    <span class="n">TeddyBear</span> <span class="n">teddyBear</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TeddyBear</span><span class="p">(</span><span class="n">materials</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="s">"Brown"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">teddyBear</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Creating-a-Factory!-(Instantiation)">
+<a class="anchor" href="#Creating-a-Factory!-(Instantiation)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a Factory! (Instantiation)<a class="anchor-link" href="#Creating-a-Factory!-(Instantiation)"> </a>
+</h4>
+<p>Now that we have our product, a framework for our factory, and hopefully a little funding, we can start producing our teddy bears (might be in pretty big debt though &gt;:)</p>
+<p>Here's our teddy bear factory and an instantiation of this factory. Then we will call the production function to start producing teddy bears and make some profit &gt;:) Let's say our factory makes 5 bears a day. We'll also make a method to calculate the profit of all the functions we have and instantiate an ArrayList to keep track of how many TeddyBears we have.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TeddyBearFactory</span> <span class="kd">extends</span> <span class="n">Factory</span><span class="p">{</span> <span class="c1">//Creates child class for TeddyBearFactory and constructor w/ super() method</span>
+  <span class="kd">static</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">TeddyBear</span><span class="o">&gt;</span> <span class="n">teddyBears</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">TeddyBear</span><span class="o">&gt;</span><span class="p">();</span> <span class="c1">//List collection of all the TeddyBear objects, static so universal list belonging to class</span>
+  <span class="kd">public</span> <span class="nf">TeddyBearFactory</span><span class="p">(</span><span class="n">String</span> <span class="n">owner</span><span class="p">){</span>
+    <span class="kd">super</span><span class="p">(</span><span class="n">owner</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">production</span><span class="p">(</span><span class="kt">int</span> <span class="n">days</span><span class="p">){</span> <span class="c1">//Production of teddyBears over a certain number of days</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">days</span><span class="o">*</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">//For loop that repeatedly calls createBrownTeddyBear() and adds to static list</span>
+      <span class="n">TeddyBear</span> <span class="n">teddyBear</span> <span class="o">=</span> <span class="n">TeddyBear</span><span class="p">.</span><span class="na">createBrownTeddyBear</span><span class="p">();</span>
+      <span class="n">teddyBears</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">teddyBear</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">calculateProfit</span><span class="p">(){</span><span class="c1">//Function to calculate universal profit among any given amount of teddy bear factories</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">teddyBears</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">//For loop</span>
+      <span class="n">factoryProfit</span> <span class="o">+=</span> <span class="p">(</span><span class="n">teddyBears</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">price</span> <span class="o">-</span> <span class="n">teddyBears</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">cost</span><span class="p">);</span> <span class="c1">//Accesses static arraylist belonging to TeddyBearFactory and each object's properties</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Main-Method-(Production)">
+<a class="anchor" href="#Main-Method-(Production)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main Method (Production)<a class="anchor-link" href="#Main-Method-(Production)"> </a>
+</h4>
+<p>Now that we have the building blocks to open our first toy factory, let's create (instantiate) one and get it running!</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+    <span class="n">TeddyBearFactory</span> <span class="n">teddyBearFactory0</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TeddyBearFactory</span><span class="p">(</span><span class="s">"You"</span><span class="p">);</span> <span class="c1">//Instantiates our very first TeddyBearFactory</span>
+
+    <span class="n">teddyBearFactory0</span><span class="p">.</span><span class="na">production</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">//Calls production() method of our new factory with the argument of 3 days passed in</span>
+    <span class="n">TeddyBearFactory</span><span class="p">.</span><span class="na">calculateProfit</span><span class="p">();</span> <span class="c1">//Calculates profit of our new factory after 3 days of production</span>
+    
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Here's how many Brown Teddy Bears we've produced: "</span> <span class="o">+</span> <span class="n">TeddyBearFactory</span><span class="p">.</span><span class="na">teddyBears</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Here's our profit over three days: "</span> <span class="o">+</span> <span class="n">TeddyBearFactory</span><span class="p">.</span><span class="na">factoryProfit</span><span class="p">);</span> 
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Main</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Here's how many Brown Teddy Bears we've produced: 15
+Here's our profit over three days: 75.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="More-Production">
+<a class="anchor" href="#More-Production" aria-hidden="true"><span class="octicon octicon-link"></span></a>More Production<a class="anchor-link" href="#More-Production"> </a>
+</h4>
+<p>Let's open some new factories for some more sweet profit &gt;:) We'll count our total profit from the previous three days and the next 3 days.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+    <span class="n">TeddyBearFactory</span> <span class="n">teddyBearFactory0</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TeddyBearFactory</span><span class="p">(</span><span class="s">"You"</span><span class="p">);</span> <span class="c1">//instantiates our very first TeddyBearFactory</span>
+    <span class="n">TeddyBearFactory</span> <span class="n">teddyBearFactory1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TeddyBearFactory</span><span class="p">(</span><span class="s">"You"</span><span class="p">);</span> <span class="c1">//instantiates our a second TeddyBearFactory</span>
+    <span class="n">TeddyBearFactory</span> <span class="n">teddyBearFactory2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TeddyBearFactory</span><span class="p">(</span><span class="s">"You"</span><span class="p">);</span> <span class="c1">//instantiates a third TeddyBearFactory</span>
+
+    <span class="n">teddyBearFactory0</span><span class="p">.</span><span class="na">production</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">//Calls production() method of our new factory with the argument of 3 days passed in</span>
+
+    <span class="n">teddyBearFactory1</span><span class="p">.</span><span class="na">production</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">//Calls production() method of our new factory with the argument of 3 days passed in</span>
+    
+    <span class="n">teddyBearFactory2</span><span class="p">.</span><span class="na">production</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">//Calls production() method of our new factory with the argument of 3 days passed in</span>
+    <span class="n">TeddyBearFactory</span><span class="p">.</span><span class="na">calculateProfit</span><span class="p">();</span> <span class="c1">//Calculates profit of our new factory after 3 days of production</span>
+    
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Here's how many Brown Teddy Bears we've produced with all our factories: "</span> <span class="o">+</span> <span class="n">TeddyBearFactory</span><span class="p">.</span><span class="na">teddyBears</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Here's our profit: "</span> <span class="o">+</span> <span class="n">TeddyBearFactory</span><span class="p">.</span><span class="na">factoryProfit</span><span class="p">);</span>
+
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Main</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Here's how many Brown Teddy Bears we've produced with all our factories: 60
+Here's our profit: 375.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Takeaways">
+<a class="anchor" href="#Takeaways" aria-hidden="true"><span class="octicon octicon-link"></span></a>Takeaways<a class="anchor-link" href="#Takeaways"> </a>
+</h3>
+<p>Object Oriented Programming is quite powerful. It allows programmer to create archetypes through the concept of classes which they can then expand upon through inheritance. Additionally, it's abstraction of programming into objects allow code to be organized and modeled after the real world.</p>
+<p>In my example, I used a factory to represent that classes act as a factory (slightly redundant). Every non-static method or variable is a blueprint within them that serve as instructions to produce a certain good (object) with its own functions and properties. Every static method or variable is a function or property of the factory itself which the factory can call upon.</p>
+<p>Constructors are the initial instructions that are run in order to instantiate objects. This is the bulk of the factory's (class's) blueprint to create goods (objects). Sometimes this factory can also cause an object to run methods in when it's instantiating the object. For instance, an iPhone goes through quality control before it is packaged and sent as a final product.</p>
+<p>Classes can also instantiate themselves so long as the constructor is called. In a factory example, a factory (class) producing electricity (object) can also use the electricity to power a toaster in the factory (method using electricity). This is one of the many examples of how unlike procedural programming which usually follows a set path of code, OOP enables programmers to utilize code from anywhere even outside the main() function. This leads into the topic of abstraction which I'll talk about sometime in the future.</p>
+<p>All in all, OOP is pretty cool!</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/CSAFastPages/college%20board/java/2022/09/03/oop-and-using-objects.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSAFastPages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/CSAFastPages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSAFastPages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Don&#39;s blogging platform with Jupyter Notebooks 🥶</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/CSAFastPages/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/CSAFastPages/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
