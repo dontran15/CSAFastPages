@@ -22,7 +22,8 @@ Awfully empty rn will change soon >:)
 
 ### Week 2
 
--
+- [Using Objects Notes]()
+- [Using Objects Code](https://dontran15.github.io/CSAFastPages/college%20board/java/2022/09/03/oop-and-using-objects.html)
 
 ### Week 3
 

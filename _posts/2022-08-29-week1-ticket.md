@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: Week 0 Ticket
+description: Week 1 Ticket
 comments: false
 author: Don Tran
 categories: [markdown, fastpages, week 1]

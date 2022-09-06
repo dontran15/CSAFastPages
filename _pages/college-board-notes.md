@@ -14,10 +14,14 @@ A collection of my College Board tools and learning for CSA. It'll contain test 
 > Learn the fundamentals of Java, a programming language, as well as other foundational concepts for coding like primitives.
 
 - [Primitives](https://dontran15.github.io/CSAFastPages/java/primitives/2022/08/23/primitives.html)
+- [Ticket 1](https://dontran15.github.io/CSAFastPages/markdown/fastpages/week%201/2022/08/29/week1-ticket.html)
 
 ## Unit 2: Using Objects
 
 > Explore reference data as a way to represent real-world objects in a digital world and discover methods to perform more complex operations.
+
+- [Using Objects](https://dontran15.github.io/CSAFastPages/college%20board/java/2022/09/03/oop-and-using-objects.html)
+- [Ticket 2]()
 
 ## Unit 3: Boolean Expressions and If Statements
 
