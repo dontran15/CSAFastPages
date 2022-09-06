@@ -27,7 +27,9 @@ Some improvements: preferably a better GUI that gives the user a better range of
 
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/75715248/188583668-d4d07a5f-70f1-46bc-9a99-e211d673e2e6.png">
 
-Don and Nathan worked together to set up a Web Browser Application that works as a very basic calculator that takes a string as an input. It then performs the operations it sees in the string on each of the values. It uses Spring Boot and MVC to interface the html output with the actual logic
+Don and Nathan worked together to set up a Web Browser Application that works as a very basic calculator that takes a string as an input. It then performs the operations it sees in the string on each of the values. It uses Spring Boot and MVC to interface the html output with the actual logic.
+
+Using MVC, we have the html template that serves as the basis of the page for the calculator with the buttons, the text input, and the output. Next, we have the logic which is in Calculator.java and that essentially takes in a userInput string and parses it and applies the operations. Finally, we have the controller which is in the file CalcController and that passes the userinput from the html form the user submits into the Calculator.java logic which returns a string output. That is put into the model that Spring Boot provides which then returns the form to the browser and displays the output.
 
 Some limitations include: a disregard for order of operations, very specific syntax has to be used most of the time or else it wont output at all or will output what the user outputted, its limited only to the four basic operations, the GUI only has a string user input and an = sign button that functions.
 
