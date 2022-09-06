@@ -16,3 +16,12 @@ As a result, we've decided that if we go on with this project we'd make a web ap
 We may upload our previous code related to math and hopefully find ways to interface them with SpringBoot.
 
 Although this is not a comprehensive plan of what we will or could do, we hope this post will serve as a baseline as to what we can do and may be able to use Spring Boot for. The most important thing is creating a project that we can all work on together as teammates while learning the intricacies of backend and to a small degree front end development.
+
+## Team Makeup
+
+Of course it'd be great if everyone could learn all the parts but delegating some roles would definitely help ease our work load and mark out clear responsibilities. We're hoping to divide the work as so:
+
+- Don: Spring Boot and MVC
+- Krish: Calculator Functionality (parsing, functions, etc.)
+- Nicky: Calculator Functionality (parsing, functions, etc.)
+- Nathan: HTML/CSS, Calculator Functionality (compatibility with Spring Boot)
