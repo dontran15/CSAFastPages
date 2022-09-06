@@ -13,6 +13,8 @@ Woooo so far we've created only a basic calculator but we're hoping to expand up
 
 ### Desktop Application Calculator (Krish and Nicky)
 
+<img width="495" alt="image" src="https://user-images.githubusercontent.com/75715248/188583403-d22f1fd1-2c42-4cca-b27b-a6dd0ec2da03.png">
+
 Krish and Nicky worked together to set up a Desktop GUI that implemented a calculator using JFrame and Springboot. At its core, it simply takes two numbers which the user inputs and a function that the user specifies to perform a mathematical operation and output the value.
 
 Some limitations include: a lack of practical usability as a UI, limits to only two numbers being computed at a time, only one operator/function being able to be used at a time.
@@ -22,6 +24,8 @@ Some pros include: a clean GUI that is accurate and does not need to interface w
 Some improvements: preferably a better GUI that gives the user a better range of options, maybe more operations, performing multiple operations at a time
 
 ### Web Browser Application (Don and Nathan)
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/75715248/188583668-d4d07a5f-70f1-46bc-9a99-e211d673e2e6.png">
 
 Don and Nathan worked together to set up a Web Browser Application that works as a very basic calculator that takes a string as an input. It then performs the operations it sees in the string on each of the values. It uses Spring Boot and MVC to interface the html output with the actual logic
 
