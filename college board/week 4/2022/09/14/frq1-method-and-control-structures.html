@@ -181,9 +181,9 @@ window.onload = wrap_img;
 <h4 id="Instructions-(It-hurts-my-eyes-and-brain-to-read-:')">
 <a class="anchor" href="#Instructions-(It-hurts-my-eyes-and-brain-to-read-:')" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instructions (It hurts my eyes and brain to read :')<a class="anchor-link" href="#Instructions-(It-hurts-my-eyes-and-brain-to-read-:')"> </a>
 </h4>
+<blockquote>
 <ol>
-<li>The APCalendar class contains methods used to calculate information about a calendar. You will write two
-methods of the class.
+<li>The APCalendar class contains methods used to calculate information about a calendar. You will write two methods of the class.
 public class APCalendar
 {
 /<strong> Returns true if year is a leap year and false otherwise. <em>/
@@ -192,8 +192,7 @@ private static boolean isLeapYear(int year)
 /</strong> Returns the number of leap years between year1 and year2, inclusive.</li>
 </ol>
 <ul>
-<li>Precondition: 0 &lt;= year1 &lt;= year2
-<em>/
+<li>Precondition:0 &lt;= year1 &lt;= year2&gt; <em>/
 public static int numberOfLeapYears(int year1, int year2)
 { /</em> to be implemented in part (a) */ }
 /** Returns the value representing the day of the week for the first day of year,</li>
@@ -203,20 +202,19 @@ private static int firstDayOfYear(int year)
 { /</em> implementation not shown */ }
 /** Returns n, where month, day, and year specify the nth day of the year.</li>
 <li>Returns 1 for January 1 (month = 1, day = 1) of any year.</li>
-<li>Precondition: The date represented by month, day, year is a valid date.
-<em>/
+<li>Precondition:The date represented by month, day, year is a valid date.&gt; <em>/
 private static int dayOfYear(int month, int day, int year)
 { /</em> implementation not shown */ }
 /** Returns the value representing the day of the week for the given date</li>
 <li>(month, day, year), where 0 denotes Sunday, 1 denotes Monday, ...,</li>
 <li>and 6 denotes Saturday.</li>
-<li>Precondition: The date represented by month, day, year is a valid date.
-<em>/
+<li>Precondition:The date represented by month, day, year is a valid date.&gt; <em>/
 public static int dayOfWeek(int month, int day, int year)
 { /</em> to be implemented in part (b) */ }
 // There may be instance variables, constructors, and other methods not shown.
 }</li>
 </ul>
+</blockquote>
 
 </div>
 </div>
@@ -227,18 +225,17 @@ public static int dayOfWeek(int month, int day, int year)
 <h3 id="Part-A">
 <a class="anchor" href="#Part-A" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part A<a class="anchor-link" href="#Part-A"> </a>
 </h3>
-<p>(a) Write the static method numberOfLeapYears, which returns the number of leap years between
-year1 and year2, inclusive.
+<blockquote>
+<p>(a) Write the static method numberOfLeapYears, which returns the number of leap years between year1 and year2, inclusive.
 In order to calculate this value, a helper method is provided for you.
 • isLeapYear(year) returns true if year is a leap year and false otherwise.
-Complete method numberOfLeapYears below. You must use isLeapYear appropriately to
-receive full credit.
+Complete method numberOfLeapYears below. You must use isLeapYear appropriately to receive full credit.
 /** Returns the number of leap years between year1 and year2, inclusive.</p>
 <ul>
-<li>Precondition: 0 &lt;= year1 &lt;= year2
-*/
+<li>Precondition:0 &lt;= year1 &lt;= year2&gt; */
 public static int numberOfLeapYears(int year1, int year2)</li>
 </ul>
+</blockquote>
 
 </div>
 </div>
@@ -250,8 +247,8 @@ public static int numberOfLeapYears(int year1, int year2)</li>
 <a class="anchor" href="#Approach-to-Part-A" aria-hidden="true"><span class="octicon octicon-link"></span></a>Approach to Part A<a class="anchor-link" href="#Approach-to-Part-A"> </a>
 </h4>
 <p>Note to Self: Preconditions means that the following condition is assumed to be met when inputs are implemented. Therefore, it is redundant and unnecessary to specify an if statement to check the Preconditions</p>
-<p>They provide the function isLeapYear which significantly eases how much I need to do b/c finidng if it is a leap year or not would hurt my brain to code and check. Therefore, the only concern would be the function which they ask for which outputs the number of leap years on a range of years from year1 to year2.</p>
-<p>First we create our method singature (a static method as asked) and set its return type as an integer (since it'll return the # of years that are actually leap years) w/ the arguments year 1 and year 2 (the range of years). Since we are returning the # of years that are leap years, we can instantiate a int variable, leapYearCounter, to 0.</p>
+<p>They provide the function isLeapYear which significantly eases how much I need to do b/c finding if it is a leap year or not would hurt my brain to code and check. Therefore, the only concern would be the function which they ask for which outputs the number of leap years on a range of years from year1 to year2.</p>
+<p>First we create our method signature (a static method as asked) and set its return type as an integer (since it'll return the # of years that are actually leap years) w/ the arguments year 1 and year 2 (the range of years). Since we are returning the # of years that are leap years, we can instantiate a int variable, leapYearCounter, to 0.</p>
 <p>Now that we're done with creating the base of the method, we can start w/ the meat of the method. Since we can check if each year is a leap year with isLeapYear(), we simply need to iterate through each year in the range (inclusive) and pass them through isLeapYear(). If the isLeapYear() returns true, we add 1 to our leapYearCounter. The result should be a the number of leap years being recorded in leapYearCounter and thus we can return that value as the output.</p>
 
 </div>
@@ -289,15 +286,11 @@ public static int numberOfLeapYears(int year1, int year2)</li>
 <h3 id="Part-B">
 <a class="anchor" href="#Part-B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Part B<a class="anchor-link" href="#Part-B"> </a>
 </h3>
-<p>(b) Write the static method dayOfWeek, which returns the integer value representing the day of the week for
-the given date (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.</p>
+<blockquote>
+<p>(b) Write the static method dayOfWeek, which returns the integer value representing the day of the week for the given date (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.</p>
 <p>For example, 2019 began on a Tuesday, and January 5 is the fifth day of 2019. As a result, January 5, 2019, fell on a Saturday, and the method call dayOfWeek(1, 5, 2019) returns 6.</p>
-<p>As another example, January 10 is the tenth day of 2019. As a result, January 10, 2019, fell on a Thursday,
-and the method call dayOfWeek(1, 10, 2019) returns 4.
-In order to calculate this value, two helper methods are provided for you.</p>
-<p>• firstDayOfYear(year) returns the integer value representing the day of the week for the first
-day of year, where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday. For
-example, since 2019 began on a Tuesday, firstDayOfYear(2019) returns 2.</p>
+<p>As another example, January 10 is the tenth day of 2019. As a result, January 10, 2019, fell on a Thursday, and the method call dayOfWeek(1, 10, 2019) returns 4. In order to calculate this value, two helper methods are provided for you.</p>
+<p>• firstDayOfYear(year) returns the integer value representing the day of the week for the first day of year, where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday. For example, since 2019 began on a Tuesday, firstDayOfYear(2019) returns 2.</p>
 <p>• dayOfYear(month, day, year) returns n, where month, day, and year specify the nth day of the year. For the first day of the year, January 1 (month = 1, day = 1), the value 1 is returned. This method accounts for whether year is a leap year. For example, dayOfYear(3, 1, 2017) returns 60, since 2017 is not a leap year, while dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year.</p>
 <p>Class information for this question</p>
 <p>public class APCalendar
@@ -306,16 +299,15 @@ public static int numberOfLeapYears(int year1, int year2)
 private static int firstDayOfYear(int year)
 private static int dayOfYear(int month, int day, int year)
 public static int dayOfWeek(int month, int day, int year)</p>
-<p>Complete method dayOfWeek below. You must use firstDayOfYear and dayOfYear
-appropriately to receive full credit.</p>
+<p>Complete method dayOfWeek below. You must use firstDayOfYear and dayOfYear appropriately to receive full credit.</p>
 <p>/** Returns the value representing the day of the week for the given date</p>
 <ul>
 <li>(month, day, year), where 0 denotes Sunday, 1 denotes Monday, ...,</li>
 <li>and 6 denotes Saturday.</li>
-<li>Precondition: The date represented by month, day, year is a valid date.
-*/
+<li>Precondition:The date represented by month, day, year is a valid date.&gt; */
 public static int dayOfWeek(int month, int day, int year)</li>
 </ul>
+</blockquote>
 
 </div>
 </div>
