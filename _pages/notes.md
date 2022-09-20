@@ -33,8 +33,11 @@ Awfully empty rn will change soon >:)
 
 - [AWS Deployment](https://dontran15.github.io/CSAFastPages/pbl/week%203/2022/09/09/aws-deployment.html)
 - [Focus and Habits - Laurie Santos Yale Video](https://dontran15.github.io/CSAFastPages/human%20prep/week%203/2022/09/09/focus-and-habits.html)
-- [Week 3 Ticket]()
+- [Week 3 Ticket](https://dontran15.github.io/CSAFastPages/2022/09/11/week3-ticket.html)
 
 ### Week 4
 
--
+- [FRQ #1 2019 College Board](https://dontran15.github.io/CSAFastPages/college%20board/week%204/2022/09/14/frq1-method-and-control-structures.html)
+- [Agile Reflection](https://dontran15.github.io/CSAFastPages/college%20board/week%204/2022/09/15/agile-reflection.html)
+- [Front End Updates](https://dontran15.github.io/CSAFastPages/college%20board/week%204/2022/09/16/fastpages-and-springboot-update.html)
+- [Week 4 Ticket]()

@@ -1,3 +1,13 @@
+---
+toc: true
+layout: post
+description: Week 3 Ticket
+comments: false
+author: Don Tran
+categories: [markdown, fastpages, week 3]
+title: Week 3 Ticket
+---
+
 ## Score: 2.7+
 
 ## Requirements

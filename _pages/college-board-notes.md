@@ -31,6 +31,8 @@ A collection of my College Board tools and learning for CSA. It'll contain test 
 
 > Learn about iteration, another building block of algorithms that are for repetition.
 
+- [Iteration Through 2D Array](https://dontran15.github.io/CSAFastPages/college%20board/week%204/2022/09/15/iteration-mini-lab.html)
+
 ## Unit 5: Writing Classes
 
 > Explore how real-world interactions can be expressed digitally by organizing behaviors and attributes into classes, and you’ll examine the legal and ethical implications of computer programming.
@@ -46,6 +48,8 @@ A collection of my College Board tools and learning for CSA. It'll contain test 
 ## Unit 8: 2D Array
 
 > Branch out into 2D arrays and experiment with data sets represented in a table.
+
+- [Iteration Through 2D Array](https://dontran15.github.io/CSAFastPages/college%20board/week%204/2022/09/15/iteration-mini-lab.html)
 
 ## Unit 9: Inheritance
 
