@@ -4,22 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Frontend Updates (Fastpages and Spring Boot Project) | Don’s Fast Pages 💻</title>
+<title>Spring Boot Update | Don’s Fast Pages 💻</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Frontend Updates (Fastpages and Spring Boot Project)" />
+<meta property="og:title" content="Spring Boot Update" />
 <meta name="author" content="Don Tran" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="updating my fastpages and spring boot project b/c frankly it’s pretty bad" />
-<meta property="og:description" content="updating my fastpages and spring boot project b/c frankly it’s pretty bad" />
+<meta name="description" content="here’s a spring boot update to the calculator" />
+<meta property="og:description" content="here’s a spring boot update to the calculator" />
 <link rel="canonical" href="https://dontran15.github.io/CSAFastPages/pbl/week%205/2022/09/25/html-javascript-fastpages-and-springboot-update.html" />
 <meta property="og:url" content="https://dontran15.github.io/CSAFastPages/pbl/week%205/2022/09/25/html-javascript-fastpages-and-springboot-update.html" />
 <meta property="og:site_name" content="Don’s Fast Pages 💻" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-09-25T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Frontend Updates (Fastpages and Spring Boot Project)" />
+<meta property="twitter:title" content="Spring Boot Update" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Don Tran"},"dateModified":"2022-09-25T00:00:00-05:00","datePublished":"2022-09-25T00:00:00-05:00","description":"updating my fastpages and spring boot project b/c frankly it’s pretty bad","headline":"Frontend Updates (Fastpages and Spring Boot Project)","mainEntityOfPage":{"@type":"WebPage","@id":"https://dontran15.github.io/CSAFastPages/pbl/week%205/2022/09/25/html-javascript-fastpages-and-springboot-update.html"},"url":"https://dontran15.github.io/CSAFastPages/pbl/week%205/2022/09/25/html-javascript-fastpages-and-springboot-update.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Don Tran"},"dateModified":"2022-09-25T00:00:00-05:00","datePublished":"2022-09-25T00:00:00-05:00","description":"here’s a spring boot update to the calculator","headline":"Spring Boot Update","mainEntityOfPage":{"@type":"WebPage","@id":"https://dontran15.github.io/CSAFastPages/pbl/week%205/2022/09/25/html-javascript-fastpages-and-springboot-update.html"},"url":"https://dontran15.github.io/CSAFastPages/pbl/week%205/2022/09/25/html-javascript-fastpages-and-springboot-update.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSAFastPages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dontran15.github.io/CSAFastPages/feed.xml" title="Don's Fast Pages 💻" /><link rel="shortcut icon" type="image/x-icon" href="/CSAFastPages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -74,7 +74,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Frontend Updates (Fastpages and Spring Boot Project)</h1><p class="page-description">updating my fastpages and spring boot project b/c frankly it's pretty bad</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-25T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Spring Boot Update</h1><p class="page-description">here's a spring boot update to the calculator</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-25T00:00:00-05:00" itemprop="datePublished">
         Sep 25, 2022
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      5 min read
     
 </span></p>
 
@@ -132,8 +132,8 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#Updates">Updates </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Fastpages">Fastpages </a></li>
-<li class="toc-entry toc-h3"><a href="#Spring-Boot-Project">Spring Boot Project </a></li>
+<li class="toc-entry toc-h3"><a href="#Controller">Controller </a></li>
+<li class="toc-entry toc-h3"><a href="#Model">Model </a></li>
 </ul>
 </li>
 </ul><!--
@@ -151,17 +151,395 @@ window.onload = wrap_img;
 <h2 id="Updates">
 <a class="anchor" href="#Updates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Updates<a class="anchor-link" href="#Updates"> </a>
 </h2>
-<p>Honestly Fastpages is boring af and I wanted to try to find ways to personalize it. Similarly, my Spring Boot Project is still heavily based on the Nighthawk Spring Boot repo that was given to us so I also wanted to try to find ways to personalize it. Fastpages will definitely be the harder of the two to customize due to its built in limitations which are often hard to update b/c it needs to be specifically made so that it builds in a defined manner.</p>
-<p>Here's the updates I managed to do:</p>
-<h3 id="Fastpages">
-<a class="anchor" href="#Fastpages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fastpages<a class="anchor-link" href="#Fastpages"> </a>
+<p>As of now, we've managed to get a working calculator with working button inputs using Spring Boot, JavaScript, and some basic HTML/CSS. So far, you can either use button inputs or type into the calculator. The calculator supports basic operators, order of operations (pemdas), and a few basic functions.</p>
+<p><a href="dontntntnt.de/calculator">Calculator</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Controller">
+<a class="anchor" href="#Controller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Controller<a class="anchor-link" href="#Controller"> </a>
 </h3>
-<h3 id="Spring-Boot-Project">
-<a class="anchor" href="#Spring-Boot-Project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spring Boot Project<a class="anchor-link" href="#Spring-Boot-Project"> </a>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">package</span> <span class="nn">com.nighthawk.spring_portfolio.controllers</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Controller</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.ui.Model</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.PostMapping</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RequestParam</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">com.nighthawk.spring_portfolio.models.calculator.*</span><span class="p">;</span>
+
+<span class="nd">@Controller</span> <span class="c1">// HTTP requests are handled as a controller, using the @Controller annotation</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CalcController</span> <span class="p">{</span>
+
+    <span class="c1">// CONTROLLER handles GET request for /calculator, maps it to calculator()</span>
+    <span class="c1">// method</span>
+    <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">"/calculator"</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">calculator</span><span class="p">(</span><span class="nd">@RequestParam</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"input"</span><span class="p">,</span> <span class="n">required</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="n">String</span> <span class="n">input</span><span class="p">,</span> <span class="n">Model</span> <span class="n">model</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// If no output parameter has been inputted</span>
+        <span class="n">String</span> <span class="n">output</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">input</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">CalculatorRPN</span> <span class="n">calcRPN</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CalculatorRPN</span><span class="p">();</span>
+            <span class="n">calcRPN</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+            <span class="n">calcRPN</span><span class="p">.</span><span class="na">shuntingYardAlg</span><span class="p">();</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">calcRPN</span><span class="p">.</span><span class="na">rpnEvaluate</span><span class="p">());</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// model to map output into html</span>
+        <span class="n">model</span><span class="p">.</span><span class="na">addAttribute</span><span class="p">(</span><span class="s">"output"</span><span class="p">,</span> <span class="n">output</span><span class="p">);</span>
+
+        <span class="c1">// load HTML VIEW (calculator.html)</span>
+        <span class="k">return</span> <span class="s">"calculator"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Model">
+<a class="anchor" href="#Model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model<a class="anchor-link" href="#Model"> </a>
 </h3>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">package</span> <span class="nn">com.nighthawk.spring_portfolio.models.calculator</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CalculatorRPN</span> <span class="p">{</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">tokens</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">rpnOutput</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+    <span class="n">String</span><span class="o">[]</span> <span class="n">functions</span> <span class="o">=</span> <span class="p">{</span> <span class="s">"sin"</span><span class="p">,</span> <span class="s">"cos"</span><span class="p">,</span> <span class="s">"tan"</span><span class="p">,</span> <span class="s">"ln"</span> <span class="p">};</span>
+
+    <span class="c1">// checks for operator</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isOperator</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="sc">'+'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'-'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'*'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'/'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'^'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// else of switch</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isOperator</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">isOperator</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isParenthesis</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="sc">'('</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">')'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isFunction</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">func</span> <span class="p">:</span> <span class="n">functions</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="n">func</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'o'</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isFunction</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">isFunction</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isNumber</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">!</span><span class="n">isOperator</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">isParenthesis</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">isFunction</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getPrecedence</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="sc">'+'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'-'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'*'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">3</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'/'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">3</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'^'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">4</span><span class="p">;</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getPrecedence</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">getPrecedence</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)));</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getAssociativity</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="sc">'+'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s">"left"</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'-'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s">"left"</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'*'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s">"left"</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'/'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s">"left"</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'^'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s">"right"</span><span class="p">;</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="k">return</span> <span class="s">""</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getAssociativity</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">getAssociativity</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s">""</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">calculate</span><span class="p">(</span><span class="kt">char</span> <span class="n">operator</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">operator</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="sc">'+'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'-'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">x1</span> <span class="o">-</span> <span class="n">x2</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'*'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">x1</span> <span class="o">*</span> <span class="n">x2</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'/'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">x1</span> <span class="o">/</span> <span class="n">x2</span><span class="p">;</span>
+            <span class="k">case</span> <span class="sc">'^'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">);</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s">"Unsupported operator: "</span> <span class="o">+</span> <span class="n">operator</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">String</span> <span class="n">operator</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x1</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">operator</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">calculate</span><span class="p">(</span><span class="n">operator</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s">"Unsupported operator or function: "</span> <span class="o">+</span> <span class="n">operator</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">funcCalculate</span><span class="p">(</span><span class="kt">char</span> <span class="n">function</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">function</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="sc">'s'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Math</span><span class="p">.</span><span class="na">sin</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+            <span class="k">case</span> <span class="sc">'c'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Math</span><span class="p">.</span><span class="na">cos</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+            <span class="k">case</span> <span class="sc">'t'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Math</span><span class="p">.</span><span class="na">tan</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+            <span class="k">case</span> <span class="sc">'l'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Math</span><span class="p">.</span><span class="na">log1p</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+            <span class="k">case</span> <span class="sc">'o'</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Math</span><span class="p">.</span><span class="na">log10</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s">"Unsupported function: "</span> <span class="o">+</span> <span class="n">function</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">funcCalculate</span><span class="p">(</span><span class="n">String</span> <span class="n">function</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">function</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">funcCalculate</span><span class="p">(</span><span class="n">function</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s">"Unsupported operator or function: "</span> <span class="o">+</span> <span class="n">function</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// parse input string as array of tokens</span>
+    <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">parse</span><span class="p">(</span><span class="n">String</span> <span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">func</span> <span class="p">:</span> <span class="n">functions</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">input</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">replaceAll</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">Character</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">func</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)));</span>
+        <span class="p">}</span>
+
+        <span class="n">input</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">replaceAll</span><span class="p">(</span><span class="s">"log"</span><span class="p">,</span> <span class="s">"o"</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">input</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">isNumber</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">c</span><span class="p">)))</span> <span class="p">{</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="n">c</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="s">"\t"</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="s">"\t"</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">String</span><span class="o">[]</span> <span class="n">splittedTokens</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">"\t"</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">tempTokens</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">token</span> <span class="p">:</span> <span class="n">splittedTokens</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">String</span> <span class="n">trimmedToken</span> <span class="o">=</span> <span class="n">token</span><span class="p">.</span><span class="na">trim</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">trimmedToken</span> <span class="o">!=</span> <span class="s">""</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">tempTokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">trimmedToken</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">"-"</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// if breaks, try adding tokens -1, * instead</span>
+            <span class="n">tokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"0"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">tempTokens</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">tokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="n">tempTokens</span><span class="p">.</span><span class="na">size</span><span class="p">())</span> <span class="p">{</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">")"</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">"("</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">tokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"*"</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">"("</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">"-"</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">tokens</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">tokens</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+                <span class="n">tokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"-1"</span><span class="p">);</span>
+                <span class="n">tokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"*"</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">isNumber</span><span class="p">(</span><span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">"("</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">tokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"*"</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">")"</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">isNumber</span><span class="p">(</span><span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span> <span class="p">{</span>
+                <span class="n">tokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"*"</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">"^"</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">tempTokens</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="s">"-"</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">tokens</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+                <span class="n">tokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"^"</span><span class="p">);</span>
+                <span class="n">tokens</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"-1"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">tokens</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// shunting yard algorithm to convert array to rpn</span>
+    <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">shuntingYardAlg</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">operatorStack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">token</span> <span class="p">:</span> <span class="n">tokens</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">isNumber</span><span class="p">(</span><span class="n">token</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">rpnOutput</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">isFunction</span><span class="p">(</span><span class="n">token</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">operatorStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">isOperator</span><span class="p">(</span><span class="n">token</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">operatorStack</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+                    <span class="n">String</span> <span class="n">o1</span> <span class="o">=</span> <span class="n">token</span><span class="p">;</span>
+                    <span class="n">String</span> <span class="n">o2</span> <span class="o">=</span> <span class="n">operatorStack</span><span class="p">.</span><span class="na">peek</span><span class="p">();</span>
+                    <span class="kt">int</span> <span class="n">o1P</span> <span class="o">=</span> <span class="n">getPrecedence</span><span class="p">(</span><span class="n">o1</span><span class="p">);</span>
+                    <span class="kt">int</span> <span class="n">o2P</span> <span class="o">=</span> <span class="n">getPrecedence</span><span class="p">(</span><span class="n">o2</span><span class="p">);</span>
+                    <span class="k">if</span> <span class="p">((</span><span class="n">isOperator</span><span class="p">(</span><span class="n">o2</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">o2P</span> <span class="o">&gt;</span> <span class="n">o1P</span> <span class="o">||</span> <span class="p">(</span><span class="n">o1P</span> <span class="o">==</span> <span class="n">o2P</span> <span class="o">&amp;&amp;</span> <span class="n">getAssociativity</span><span class="p">(</span><span class="n">o1</span><span class="p">)</span> <span class="o">==</span> <span class="s">"left"</span><span class="p">))))</span> <span class="p">{</span>
+                        <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">operatorStack</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span>
+                        <span class="n">rpnOutput</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+
+                <span class="n">operatorStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">token</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">"("</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">operatorStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">token</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">")"</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">operatorStack</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">operatorStack</span><span class="p">.</span><span class="na">peek</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">"("</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">operatorStack</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span>
+                    <span class="n">rpnOutput</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="n">operatorStack</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">isFunction</span><span class="p">(</span><span class="n">operatorStack</span><span class="p">.</span><span class="na">peek</span><span class="p">()))</span> <span class="p">{</span>
+                    <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">operatorStack</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span>
+                    <span class="n">rpnOutput</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+        <span class="p">}</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">operatorStack</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">operatorStack</span><span class="p">.</span><span class="na">pop</span><span class="p">();</span>
+            <span class="n">rpnOutput</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">rpnOutput</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// evaluate rpn using stack</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">rpnEvaluate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultStack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">e</span> <span class="p">:</span> <span class="n">rpnOutput</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">isNumber</span><span class="p">(</span><span class="n">e</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">resultStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">isOperator</span><span class="p">(</span><span class="n">e</span><span class="p">))</span> <span class="p">{</span>
+                <span class="kt">double</span> <span class="n">x2</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">resultStack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+                <span class="kt">double</span> <span class="n">x1</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">resultStack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+
+                <span class="kt">double</span> <span class="n">r</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">);</span>
+                <span class="n">resultStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">r</span><span class="p">));</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">isFunction</span><span class="p">(</span><span class="n">e</span><span class="p">))</span> <span class="p">{</span>
+                <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">resultStack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+
+                <span class="kt">double</span> <span class="n">r</span> <span class="o">=</span> <span class="n">funcCalculate</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+                <span class="n">resultStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">r</span><span class="p">));</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">Double</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">resultStack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
