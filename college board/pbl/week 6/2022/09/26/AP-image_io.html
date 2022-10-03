@@ -198,6 +198,38 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>javax.imageio.IIOException: Can't read input file!
+	at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1310)
+	at REPL.$JShell$16$ImageIOTest.main($JShell$16.java:32)
+	at REPL.$JShell$17.do_it$($JShell$17.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at io.github.spencerpark.ijava.execution.IJavaExecutionControl.lambda$execute$1(IJavaExecutionControl.java:95)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Success
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -348,8 +380,8 @@ window.onload = wrap_img;
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
         <span class="p">}</span>
 
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">img</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">img</span><span class="p">.</span><span class="na">getWidth</span><span class="p">();</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">img</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span> <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">img</span><span class="p">.</span><span class="na">getWidth</span><span class="p">();</span> <span class="n">j</span><span class="o">+=</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">Color</span> <span class="n">col</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
                 <span class="kt">double</span> <span class="n">pixVal</span> <span class="o">=</span> <span class="p">(((</span><span class="n">col</span><span class="p">.</span><span class="na">getRed</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.30</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">col</span><span class="p">.</span><span class="na">getBlue</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.59</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">col</span>
                         <span class="p">.</span><span class="na">getGreen</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.11</span><span class="p">)));</span>
@@ -407,6 +439,12 @@ window.onload = wrap_img;
         <span class="n">pumpkin</span><span class="p">.</span><span class="na">resize</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span>
         <span class="n">pumpkin</span><span class="p">.</span><span class="na">printStats</span><span class="p">(</span><span class="s">"Scaled"</span><span class="p">);</span>
         <span class="n">pumpkin</span><span class="p">.</span><span class="na">convertToAscii</span><span class="p">();</span>
+
+        <span class="n">Pics</span> <span class="n">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pics</span><span class="p">(</span><span class="s">"IMG_3144"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
+        <span class="n">dog</span><span class="p">.</span><span class="na">printStats</span><span class="p">(</span><span class="s">"Original"</span><span class="p">);</span>
+        <span class="n">dog</span><span class="p">.</span><span class="na">resize</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+        <span class="n">dog</span><span class="p">.</span><span class="na">printStats</span><span class="p">(</span><span class="s">"Scaled"</span><span class="p">);</span>
+        <span class="n">dog</span><span class="p">.</span><span class="na">convertToAscii</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">Pics</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -426,6 +464,8 @@ window.onload = wrap_img;
 Scaled: 55625 128x136  images/tmp/MonaLisa.png
 Original: 39392 302x265  images/pumpkin.png
 Scaled: 10497 100x87  images/tmp/pumpkin.png
+Original: 13893297 4032x3024  images/IMG_3144.png
+Scaled: 263856 403x302  images/tmp/IMG_3144.png
 </pre>
 </div>
 </div>
