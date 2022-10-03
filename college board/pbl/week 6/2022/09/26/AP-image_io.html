@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      15 min read
+      14 min read
     
 </span></p>
 
@@ -628,7 +628,7 @@ window.onload = wrap_img;
     <span class="p">}</span>
     
     <span class="c1">// Will be used later</span>
-    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">conversion</span><span class="p">();</span> 
+    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">conversion</span><span class="p">();</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -686,13 +686,6 @@ window.onload = wrap_img;
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Delete File error: "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
         <span class="p">}</span>
 
-        <span class="c1">// try {</span>
-        <span class="c1">//     colorPrt = new PrintWriter(colorWrt = new FileWriter(this.colorFile, true));</span>
-        <span class="c1">// } catch (IOException e) {</span>
-        <span class="c1">//     // TODO Auto-generated catch block</span>
-        <span class="c1">//     e.printStackTrace();</span>
-        <span class="c1">// }</span>
-
         <span class="k">try</span> <span class="p">{</span>
             <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
@@ -726,6 +719,8 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
 <span class="p">}</span>
+
+<span class="n">RedConversion</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -777,13 +772,6 @@ window.onload = wrap_img;
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Delete File error: "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
         <span class="p">}</span>
 
-        <span class="c1">// try {</span>
-        <span class="c1">//     colorPrt = new PrintWriter(colorWrt = new FileWriter(this.colorFile, true));</span>
-        <span class="c1">// } catch (IOException e) {</span>
-        <span class="c1">//     // TODO Auto-generated catch block</span>
-        <span class="c1">//     e.printStackTrace();</span>
-        <span class="c1">// }</span>
-
         <span class="k">try</span> <span class="p">{</span>
             <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
@@ -799,7 +787,7 @@ window.onload = wrap_img;
 
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="c1">// System.out.println("for loop done");</span>
+        <span class="c1">//System.out.println("for loop done");</span>
 
         <span class="k">try</span> <span class="p">{</span>
             <span class="n">ImageIO</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">"png"</span><span class="p">,</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">colorFile</span><span class="p">)</span> <span class="p">);</span>
@@ -812,11 +800,13 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">BlueConversion</span> <span class="n">jerma</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BlueConversion</span><span class="p">(</span><span class="s">"jerma"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
+        <span class="n">BlueConversion</span> <span class="n">jerma</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BlueConversion</span><span class="p">(</span><span class="s">"amogus"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
         <span class="n">jerma</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
+
+<span class="n">BlueConversion</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -908,6 +898,8 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
 <span class="p">}</span>
+
+<span class="n">GreenConversion</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -1015,6 +1007,8 @@ window.onload = wrap_img;
         <span class="n">jerma</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="n">GrayConversion</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -1066,13 +1060,6 @@ window.onload = wrap_img;
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Delete File error: "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
         <span class="p">}</span>
 
-        <span class="c1">// try {</span>
-        <span class="c1">//     colorPrt = new PrintWriter(colorWrt = new FileWriter(this.colorFile, true));</span>
-        <span class="c1">// } catch (IOException e) {</span>
-        <span class="c1">//     // TODO Auto-generated catch block</span>
-        <span class="c1">//     e.printStackTrace();</span>
-        <span class="c1">// }</span>
-
         <span class="k">try</span> <span class="p">{</span>
             <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">inFile</span><span class="p">));</span>
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
@@ -1082,15 +1069,10 @@ window.onload = wrap_img;
 
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">width</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="c1">//Color col = new Color(img.getRGB(j, i));</span>
-                <span class="c1">//int rgb = new Color((int)(0.299 * col.getRed()), (int)(0.114 * col.getGreen()), (int)(0.587 * col.getBlue())).getRGB();</span>
-                <span class="kt">int</span> <span class="n">rgb</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-                <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">rgb</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span>
-                <span class="kt">int</span> <span class="n">g</span> <span class="o">=</span> <span class="p">(</span><span class="n">rgb</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">;</span>
-                <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">rgb</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">);</span>
-
                 <span class="c1">//Set RGB Inverted</span>
-                <span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="mi">255</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="mi">255</span><span class="o">-</span><span class="n">g</span><span class="p">,</span> <span class="mi">255</span><span class="o">-</span><span class="n">b</span><span class="p">);</span>
+                <span class="n">Color</span> <span class="n">col</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
+                <span class="kt">int</span> <span class="n">rgb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="mi">255</span> <span class="o">-</span> <span class="n">col</span><span class="p">.</span><span class="na">getRed</span><span class="p">(),</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">col</span><span class="p">.</span><span class="na">getGreen</span><span class="p">(),</span> <span class="mi">255</span> <span class="o">-</span> <span class="n">col</span><span class="p">.</span><span class="na">getBlue</span><span class="p">()).</span><span class="na">getRGB</span><span class="p">();</span>
+                <span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">rgb</span><span class="p">);</span>
             <span class="p">}</span>
         <span class="p">}</span>
         <span class="c1">// System.out.println("for loop done");</span>
@@ -1104,10 +1086,12 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">GrayConversion</span> <span class="n">jerma</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GrayConversion</span><span class="p">(</span><span class="s">"amogus"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
+        <span class="n">InversionConversion</span> <span class="n">jerma</span> <span class="o">=</span> <span class="k">new</span> <span class="n">InversionConversion</span><span class="p">(</span><span class="s">"amogus"</span><span class="p">,</span> <span class="s">"png"</span><span class="p">);</span>
         <span class="n">jerma</span><span class="p">.</span><span class="na">conversion</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="n">InversionConversion</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
