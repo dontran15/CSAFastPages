@@ -31,15 +31,6 @@ a:hover {
   color: $high-emph !important;
 }
 
-.site-nav {
-  background-color: $dark-grey;
-  border-color: $overlay-light;
-}
-
-* {
-  scrollbar-color: $dark-grey $overlay-light;
-}
-
 pre,
 code {
   // BVas a lighter colour to better highlight short code words
