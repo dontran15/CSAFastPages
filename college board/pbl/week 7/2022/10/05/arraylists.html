@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -220,7 +220,7 @@ window.onload = wrap_img;
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">memberList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">name</span><span class="p">);</span>
         <span class="p">}</span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="n">memberList</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">memberList</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()){</span> <span class="c1">//isEmpty() method is useful if we need to check for sure that data is clear or if we want certain conditions</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"no one here :("</span><span class="p">);</span>
         <span class="p">}</span>
 
@@ -267,9 +267,9 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         <span class="c1">//creates memberList and prints members; some uses of methods within print method</span>
         <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Member</span><span class="o">&gt;</span> <span class="n">memberList</span> <span class="o">=</span> <span class="n">Member</span><span class="p">.</span><span class="na">createMemberList</span><span class="p">();</span>
-        <span class="n">Member</span><span class="p">.</span><span class="na">printMembers</span><span class="p">(</span><span class="n">memberList</span><span class="p">,</span> <span class="s">"instantiating memberList array; get(); size(); attribute specification"</span><span class="p">);</span>
+        <span class="n">Member</span><span class="p">.</span><span class="na">printMembers</span><span class="p">(</span><span class="n">memberList</span><span class="p">,</span> <span class="s">"instantiating memberList array; get(); size(); isEmpty(); attribute specification"</span><span class="p">);</span>
 
-        <span class="c1">//add() method; Useful for adding new members to databases and additional relevant info</span>
+        <span class="c1">//add(element) method; Useful for adding new members to databases and additional relevant info</span>
         <span class="n">memberList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Member</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s">"Morb"</span><span class="p">,</span> <span class="s">"tehee.your@gmail.com"</span><span class="p">,</span> <span class="s">"754-696-9696"</span><span class="p">,</span> <span class="s">"34542"</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s">"deez"</span><span class="p">,</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">"Green Generation"</span><span class="p">,</span> <span class="s">"Anime"</span><span class="p">,</span> <span class="s">"How to Hit Man"</span><span class="p">}));</span>
         <span class="n">Member</span><span class="p">.</span><span class="na">printMembers</span><span class="p">(</span><span class="n">memberList</span><span class="p">,</span> <span class="s">"add()"</span><span class="p">);</span>
 
@@ -278,8 +278,36 @@ window.onload = wrap_img;
         <span class="n">Member</span><span class="p">.</span><span class="na">printMembers</span><span class="p">(</span><span class="n">memberList</span><span class="p">,</span> <span class="s">"clear()"</span><span class="p">);</span>
         <span class="n">memberList</span> <span class="o">=</span> <span class="n">Member</span><span class="p">.</span><span class="na">createMemberList</span><span class="p">();</span>
 
+        <span class="c1">//remove(int index); Useful for removing members at a specific index in case someone drops out</span>
+        <span class="n">memberList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="n">Member</span><span class="p">.</span><span class="na">printMembers</span><span class="p">(</span><span class="n">memberList</span><span class="p">,</span> <span class="s">"remove(int i)"</span><span class="p">);</span>
+
+        <span class="c1">//remove(element); not sure how it could be practically used in reference to objects but it could be useful to remove items from our database according to a particular value of data</span>
+
+        <span class="c1">//set(int i, element); useful for overwriting data in potential cases of a member or merging data of accounts?</span>
+        <span class="n">memberList</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="k">new</span> <span class="n">Member</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s">"Gaik"</span><span class="p">,</span> <span class="s">"Gaiko@gmail.com"</span><span class="p">,</span> <span class="s">"900-900-9000"</span><span class="p">,</span> <span class="s">"34562"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">"deez"</span><span class="p">,</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">"Slick"</span><span class="p">,</span> <span class="s">"Smart"</span><span class="p">,</span> <span class="s">"Speaker"</span><span class="p">}));</span>
+        <span class="n">Member</span><span class="p">.</span><span class="na">printMembers</span><span class="p">(</span><span class="n">memberList</span><span class="p">,</span> <span class="s">"remove(int i)"</span><span class="p">);</span>
+
+        <span class="c1">//indexOf(element); Might be useful if can be easily accessed and indexed by element w/out having to recreate each time, might be useful for finding certain users</span>
+        <span class="c1">//memberList.get(i).indexOf(member); (wrong lol)</span>
+
+        <span class="c1">//lastIndexOf(element); Same as indexOF</span>
+        <span class="c1">//memberList.get(i).lastIndexOf(member); (wrong lol)</span>
+
+        <span class="c1">//equals(); same reason it would be hard to use as s indexOf but would be useful for checking if member accounts are the same or if any particular data is similar</span>
+        <span class="c1">//memberList.get(i).equals(member); </span>
+
+        <span class="c1">//hashCode(element); Perhaps useful for figuring out certain information in reference to where the objects are being stored in memory or when we need to reference an object</span>
+        <span class="c1">//memberList.get(i).hashCode(member);</span>
+
+        <span class="c1">//contains(element); Same as indexOf except in this case checking if certain users are there or not</span>
+        <span class="c1">//memberList.contains(memberList.get(i));   </span>
+
+        <span class="c1">//containsAll(Collection collection); Useful for checking if a group of certain users, similar impracticality as indexOf</span>
+        <span class="c1">//memberList.containsAll(memberList.get(i));</span>
         
-        
+        <span class="c1">//sort(Comparator comp) Useful for sorting/organizing certain groups, in particular, likely for local client interactions when admins need to sort data</span>
+        <span class="c1">//memberList.sort();</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -297,7 +325,7 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>----------------------------
-Method: instantiating memberList array; get(); size(); attribute specification
+Method: instantiating memberList array; get(); size(); isEmpty(); attribute specification
 Your Mom
 Joe
 Jack
@@ -314,6 +342,18 @@ Morb
 ----------------------------
 Method: clear()
 no one here :(
+----------------------------
+----------------------------
+Method: remove(int i)
+Your Mom
+Jack
+Jill
+----------------------------
+----------------------------
+Method: remove(int i)
+Your Mom
+Gaik
+Jill
 ----------------------------
 </pre>
 </div>
