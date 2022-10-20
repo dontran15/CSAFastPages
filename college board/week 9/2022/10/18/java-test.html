@@ -168,19 +168,15 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getModel</span><span class="p">());</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printModel</span><span class="p">(){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getModel</span><span class="p">());</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printMilesRun</span><span class="p">(){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getMilesRun</span><span class="p">());</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printModel</span><span class="p">(){</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getModel</span><span class="p">());</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printVelocity</span><span class="p">(){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getVelocity</span><span class="p">());</span>
     <span class="p">}</span>
     
     <span class="c1">//Getters</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getOwnerName</span><span class="p">(){</span>
-        <span class="k">return</span> <span class="n">ownerName</span><span class="p">;</span>
-    <span class="p">}</span>
-
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getModel</span><span class="p">(){</span>
         <span class="k">return</span> <span class="n">model</span><span class="p">;</span>
     <span class="p">}</span>
@@ -194,10 +190,6 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="c1">//Setters</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setOwnerName</span><span class="p">(</span><span class="n">String</span> <span class="n">newOwnerName</span><span class="p">){</span>
-        <span class="n">ownerName</span> <span class="o">=</span> <span class="n">newOwnerName</span><span class="p">;</span>
-    <span class="p">}</span>
-
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setModel</span><span class="p">(</span><span class="n">String</span> <span class="n">newModel</span><span class="p">){</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">newModel</span><span class="p">;</span>
     <span class="p">}</span>
@@ -211,15 +203,14 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="c1">//Static Methods</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">manufactureCar</span><span class="p">(</span><span class="n">String</span> <span class="n">ownerName</span><span class="p">,</span> <span class="n">String</span> <span class="n">model</span><span class="p">,</span> <span class="kt">int</span> <span class="n">milesRun</span><span class="p">,</span> <span class="kt">float</span> <span class="n">velocity</span><span class="p">){</span>
-        <span class="n">CarClass</span> <span class="n">newCar</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CarClass</span><span class="p">(</span><span class="n">ownerName</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">milesRun</span><span class="p">,</span> <span class="n">velocity</span><span class="p">);</span>  
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">manufactureCar</span><span class="p">(</span><span class="n">String</span> <span class="n">model</span><span class="p">,</span> <span class="kt">int</span> <span class="n">milesRun</span><span class="p">,</span> <span class="kt">float</span> <span class="n">velocity</span><span class="p">){</span>
+        <span class="n">CarClass</span> <span class="n">newCar</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CarClass</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">milesRun</span><span class="p">,</span> <span class="n">velocity</span><span class="p">);</span>  
         <span class="n">carList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">newCar</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printCarDetails</span><span class="p">(){</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">carIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">carIndex</span> <span class="o">&lt;</span> <span class="n">carList</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">carIndex</span><span class="o">++</span><span class="p">){</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"---------------------------------"</span><span class="p">);</span>
-            <span class="n">carList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">carIndex</span><span class="p">).</span><span class="na">printCarOwner</span><span class="p">();</span>
             <span class="n">carList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">carIndex</span><span class="p">).</span><span class="na">printModel</span><span class="p">();</span>
         <span class="p">}</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"---------------------------------"</span><span class="p">);</span>
@@ -228,7 +219,8 @@ window.onload = wrap_img;
     <span class="c1">//main method</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         <span class="n">manufactureCar</span><span class="p">(</span><span class="s">"Tesla Model X"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
-        <span class="n">manufactureCar</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+        <span class="n">manufactureCar</span><span class="p">(</span><span class="s">"Prius"</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">70</span><span class="p">);</span>
+        <span class="n">manufactureCar</span><span class="p">(</span><span class="s">"Toyota Minivan"</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">65</span><span class="p">);</span>
         <span class="n">CarClass</span><span class="p">.</span><span class="na">printCarDetails</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -247,8 +239,11 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>---------------------------------
-You
 Tesla Model X
+---------------------------------
+Prius
+---------------------------------
+Toyota Minivan
 ---------------------------------
 </pre>
 </div>
