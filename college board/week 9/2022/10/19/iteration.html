@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>If/Else Statements | Don’s Fast Pages 💻</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="If/Else Statements" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Boolean and If/Else Statement Notes &amp; HW" />
+<meta property="og:description" content="Boolean and If/Else Statement Notes &amp; HW" />
+<link rel="canonical" href="https://dontran15.github.io/CSAFastPages/college%20board/week%209/2022/10/19/iteration.html" />
+<meta property="og:url" content="https://dontran15.github.io/CSAFastPages/college%20board/week%209/2022/10/19/iteration.html" />
+<meta property="og:site_name" content="Don’s Fast Pages 💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-19T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="If/Else Statements" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-19T00:00:00-05:00","datePublished":"2022-10-19T00:00:00-05:00","description":"Boolean and If/Else Statement Notes &amp; HW","headline":"If/Else Statements","mainEntityOfPage":{"@type":"WebPage","@id":"https://dontran15.github.io/CSAFastPages/college%20board/week%209/2022/10/19/iteration.html"},"url":"https://dontran15.github.io/CSAFastPages/college%20board/week%209/2022/10/19/iteration.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSAFastPages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dontran15.github.io/CSAFastPages/feed.xml" title="Don's Fast Pages 💻" /><link rel="shortcut icon" type="image/x-icon" href="/CSAFastPages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CSAFastPages/">Don&#39;s Fast Pages 💻</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CSAFastPages/about/">Who Am I?? 🥸</a><a class="page-link" href="/CSAFastPages/_pages/college-board-notes.html">AP CSA College Board Notes</a><a class="page-link" href="/CSAFastPages/_pages/notes.html">AP CSA Notes</a><a class="page-link" href="/CSAFastPages/search/">Search</a><a class="page-link" href="/CSAFastPages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">If/Else Statements</h1><p class="page-description">Boolean and If/Else Statement Notes & HW</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-19T00:00:00-05:00" itemprop="datePublished">
+        Oct 19, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/CSAFastPages/categories/#college board">college board</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/CSAFastPages/categories/#week 9">week 9</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/dontran15/CSAFastPages/tree/master/_notebooks/2022-10-19-iteration.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/CSAFastPages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/dontran15/CSAFastPages/master?filepath=_notebooks%2F2022-10-19-iteration.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSAFastPages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/dontran15/CSAFastPages/blob/master/_notebooks/2022-10-19-iteration.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSAFastPages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fdontran15%2FCSAFastPages%2Fblob%2Fmaster%2F_notebooks%2F2022-10-19-iteration.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/CSAFastPages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#3-Types">3 Types </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#While-Loops">While Loops </a></li>
+<li class="toc-entry toc-h3"><a href="#For-Loop">For Loop </a></li>
+<li class="toc-entry toc-h3"><a href="#Recursion">Recursion </a></li>
+<li class="toc-entry toc-h3"><a href="#Nested-Iteration">Nested Iteration </a></li>
+<li class="toc-entry toc-h3"><a href="#Iteration-Homework">Iteration Homework </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-10-19-iteration.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3-Types">
+<a class="anchor" href="#3-Types" aria-hidden="true"><span class="octicon octicon-link"></span></a>3 Types<a class="anchor-link" href="#3-Types"> </a>
+</h2>
+<p>Loops help simplify repetitive code, almost all of them use conditions that need to be changed within the code for the loop to stop.</p>
+<h3 id="While-Loops">
+<a class="anchor" href="#While-Loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>While Loops<a class="anchor-link" href="#While-Loops"> </a>
+</h3>
+<p>While a specified condition is met, the loop will keep running until the loops condition is no longer true.</p>
+<h3 id="For-Loop">
+<a class="anchor" href="#For-Loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Loop<a class="anchor-link" href="#For-Loop"> </a>
+</h3>
+<p>For each thing in a sequence of code for each part as long as a condition is met, if the condition is met as false, the condition will no longer be true and thus stop.</p>
+<h3 id="Recursion">
+<a class="anchor" href="#Recursion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursion<a class="anchor-link" href="#Recursion"> </a>
+</h3>
+<p>Similar to For and While loops but you run and run the function inside itself over and over again. They have conditions using if/else and keeps running until the if statement no longer is true and thus finally ends with the else statement in which the function is no longer true.</p>
+<h3 id="Nested-Iteration">
+<a class="anchor" href="#Nested-Iteration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested Iteration<a class="anchor-link" href="#Nested-Iteration"> </a>
+</h3>
+<p>Not a method but it's a technique to simplify code more. You put a loop within a loop and it runs two conditions where once one is no longer run, it runs again through the upper loop</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//while loop</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Checker</span> 
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">number</span><span class="p">;</span>  
+	
+        <span class="c1">// Create a Scanner object for keyboard input.  </span>
+        <span class="n">Scanner</span> <span class="n">keyboard</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  
+             
+        <span class="c1">// Get a number from the user.  </span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter a number in the range of 1 through 100: "</span><span class="p">);</span>  
+        <span class="n">number</span> <span class="o">=</span> <span class="n">keyboard</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>  
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">number</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="o">||</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>  
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Invalid input. Enter a number in the range "</span> <span class="o">+</span>  
+                            <span class="s">"of 1 through 100: "</span><span class="p">);</span>  
+           <span class="n">number</span> <span class="o">=</span> <span class="n">keyboard</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>  
+        <span class="p">}</span> 
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Checker</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter a number in the range of 1 through 100: Invalid input. Enter a number in the range of 1 through 100: Invalid input. Enter a number in the range of 1 through 100: Invalid input. Enter a number in the range of 1 through 100: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LoopConversion</span> 
+<span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="c1">//convert to for loop</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">count</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"count is "</span> <span class="o">+</span> <span class="n">count</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">LoopConversion</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>count is 0
+count is 1
+count is 2
+count is 3
+count is 4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Clock</span>  
+<span class="p">{</span>  
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">hours</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">hours</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="p">;</span> <span class="n">hours</span><span class="o">++</span><span class="p">)</span>  
+        <span class="p">{</span>  
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">minutes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">minutes</span> <span class="o">&lt;=</span> <span class="mi">59</span><span class="p">;</span> <span class="n">minutes</span><span class="o">++</span><span class="p">)</span>  
+            <span class="p">{</span>  
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">seconds</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">seconds</span> <span class="o">&lt;=</span> <span class="mi">59</span><span class="p">;</span> <span class="n">seconds</span><span class="o">++</span><span class="p">)</span> 
+                <span class="p">{</span>  
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"%02d:%02d:%02d\n"</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">);</span> 
+                <span class="p">}</span> 
+            <span class="p">}</span> 
+        <span class="p">}</span> 
+    <span class="p">}</span> 
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">){</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">recursion</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">num1</span> <span class="o">&lt;</span> <span class="n">num2</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num1</span><span class="p">);</span>
+
+        <span class="n">num1</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">recursion</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">num2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">recursion</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public void recursion(num1</span><span class="ansi-black-intense-fg ansi-bold">, num2)</span>
+<span class="ansi-red-intense-fg ansi-bold">&lt;identifier&gt; expected</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public void recursion(num1, num2</span><span class="ansi-black-intense-fg ansi-bold">)</span>
+<span class="ansi-red-intense-fg ansi-bold">&lt;identifier&gt; expected</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Iteration-Homework">
+<a class="anchor" href="#Iteration-Homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration Homework<a class="anchor-link" href="#Iteration-Homework"> </a>
+</h3>
+<p><a href="https://tigran7.github.io/fastpages/2022/10/18/Recursion.html">https://tigran7.github.io/fastpages/2022/10/18/Recursion.html</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/CSAFastPages/college%20board/week%209/2022/10/19/iteration.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSAFastPages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/CSAFastPages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSAFastPages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Don&#39;s blogging platform with Jupyter Notebooks 🥶</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/CSAFastPages/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/CSAFastPages/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
