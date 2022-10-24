@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Iteration Homework",
-            "content": "",
+            "content": "Part 1 . public class Guessing { static int b = randomNumber(); static boolean gameRunning = true; public static int randomNumber() { double a = (1 + Math.random() * 100); return ((int) Math.floor(a)); } public static void newNumber(){ b = randomNumber(); } public static String guessing(String guess) { int c = Integer.valueOf(guess); if (c != b) { if (c &gt; b) { return (c + &quot; was not the number,&quot; + &quot; nlower n&quot;); } if (c &lt; b) { return ( c + &quot; was not the number,&quot; + &quot; nhigher n&quot;); } } if (c == b) { gameRunning = false; return &quot;You guessed it! The number was &quot; + b; } return &quot;error&quot;; } } public class Main{ public static void main(String[] args){ Scanner scanner = new Scanner(System.in); while(Guessing.gameRunning){ System.out.println(&quot;Type Guess Here: &quot;); String input = scanner.nextLine(); System.out.println(Guessing.guessing(input)); } } } Main.main(null); . Type Guess Here: 50 was not the number, higher Type Guess Here: 75 was not the number, higher Type Guess Here: 90 was not the number, higher Type Guess Here: 92 was not the number, higher Type Guess Here: You guessed it! The number was 94 . Part 2 .",
             "url": "https://dontran15.github.io/CSAFastPages/college%20board/week%209/2022/10/23/iteration-hw.html",
             "relUrl": "/college%20board/week%209/2022/10/23/iteration-hw.html",
             "date": " • Oct 23, 2022"
