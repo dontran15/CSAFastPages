@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "If/Else Statements",
+            "title": "Arrays",
             "content": "Arrays . Data Type (reference data type) refers to an object Primitives vs Reference: lower vs UPPER . arrays and ArrayLists . Array Syntax . int[] array = new int[10]; int[] array = (10, 2, 3, 4, 5); . Traverse Array . You can use any sort of loop, main method is through for loops which is easiest way to access array indices. . College Board . Min max and sum of arrays Array.length() to find how long arrays are and access at specific index array[] . HW . Options for hacks (Pick two): . Swap the first and last element in the array | Replace all even elements with 0 | . // Write array methods for the Array Methods class below out of the options given above. public class ArrayMethods { private int[] values = {1, 2, 3, 4, 5, 6, 7, 8}; public void printElements(){ for(int i = 0; i &lt; values.length; i++){ System.out.println(values[i]); } } public void swapElements(){ int lastElement = values[values.length-1]; values[values.length-1] = values[0]; values[0] = lastElement; } public void replaceAllZero(){ for(int i = 0; i &lt; values.length; i++){ values[i] = 0; } } public static void main(String[] args){ System.out.println(&quot;First and Last Element Swap: &quot;); ArrayMethods swapElements = new ArrayMethods(); swapElements.swapElements(); swapElements.printElements(); System.out.println(&quot;Replacing All Elements w/ Zero: &quot;); ArrayMethods replaceAllZero = new ArrayMethods(); swapElements.replaceAllZero(); swapElements.printElements(); } } ArrayMethods.main(null); . First and Last Element Swap: 8 2 3 4 5 6 7 1 Replacing All Elements w/ Zero: 0 0 0 0 0 0 0 0 .",
-            "url": "https://dontran15.github.io/CSAFastPages/college%20board/week%209/2022/10/25/array.html",
-            "relUrl": "/college%20board/week%209/2022/10/25/array.html",
+            "url": "https://dontran15.github.io/CSAFastPages/college%20board/week%2010/2022/10/25/array.html",
+            "relUrl": "/college%20board/week%2010/2022/10/25/array.html",
             "date": " • Oct 25, 2022"
         }
         
