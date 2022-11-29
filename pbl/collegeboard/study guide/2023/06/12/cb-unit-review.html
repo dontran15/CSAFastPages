@@ -161,8 +161,7 @@ window.onload = wrap_img;
 <h3 id="Key-Concepts-w/-Code-Examples">
 <a class="anchor" href="#Key-Concepts-w/-Code-Examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Key Concepts w/ Code Examples<a class="anchor-link" href="#Key-Concepts-w/-Code-Examples"> </a>
 </h3>
-<p>Casting, specifically for Truncating or Rounding
-Wrapper Classes, why wrap int, double. Show examples
+<p>Wrapper Classes, why wrap int, double. Show examples
 Concatenation, explain or illustrate rules on mixed type Concatenation
 Math class, specifically Random usage
 Compound Boolean Expression
@@ -203,10 +202,35 @@ Big O notation for Hash map, Binary Search, Single loop, Nested Loop</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// Casting, specifically for Division</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Casting, specifically for Division; Casting, specifically for Truncating or Rounding</span>
+<span class="c1">// Can cast by putting type in parentheses before expression that is to be casted</span>
+<span class="c1">// Converts double result from division to integer</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Casting for Division"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="mf">20.5</span><span class="o">/</span><span class="mi">3</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="mf">20.5</span><span class="o">/</span><span class="mi">3</span><span class="p">));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------"</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>--------------------
+Casting for Division
+6.833333333333333
+6
+--------------------
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
