@@ -167,7 +167,18 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Arrays</span><span class="p">{</span>
-    <span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">},{</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">},{</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">},{</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">}};</span>
+    <span class="kt">int</span><span class="o">[][]</span> <span class="n">numbers</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">Arrays</span><span class="p">(){</span>
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">newArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">][</span><span class="mi">4</span><span class="o">]</span><span class="p">;;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">newArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">newArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="n">newArray</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="na">numbers</span> <span class="o">=</span> <span class="n">newArray</span><span class="p">;</span>
+    <span class="p">}</span>
+
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printArray</span><span class="p">(){</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numbers</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
             <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
@@ -205,13 +216,16 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">multiplyThenSum</span><span class="p">(){</span>
-        <span class="kt">int</span> <span class="n">multiplier</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numbers</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">multiply</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
             <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
-                <span class="n">sum</span> <span class="o">+=</span> <span class="n">multiplier</span><span class="o">*</span><span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">multiply</span> <span class="o">*=</span> <span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
             <span class="p">}</span>
+
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">multiply</span><span class="p">;</span>
         <span class="p">}</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Sum: "</span><span class="p">);</span>
@@ -220,9 +234,11 @@ window.onload = wrap_img;
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         <span class="n">Arrays</span> <span class="n">array</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Arrays</span><span class="p">();</span>
+        <span class="n">array</span><span class="p">.</span><span class="na">printArray</span><span class="p">();</span>
         <span class="n">array</span><span class="p">.</span><span class="na">reverseArray</span><span class="p">();</span>
         <span class="n">array</span><span class="p">.</span><span class="na">askForIndex</span><span class="p">();</span>
         <span class="n">array</span><span class="p">.</span><span class="na">multiplyThenSum</span><span class="p">();</span>
+
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -239,17 +255,21 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>
+<pre>7 10 21 0 
+9 16 0 8 
+6 10 18 36 
+2 6 12 16 
+
 
 Printing out values backward
-16 15 14 13  
-12 11 10 9  
-8 7 6 5  
-4 3 2 1  
-Enter Row Index: 1
-Enter Column Index: 1
-Result: 6
-Sum: 544
+16 12 6 2  
+36 18 10 6  
+8 0 16 9  
+0 21 10 7  
+Enter Row Index: 0
+Enter Column Index: 0
+Result: 7
+Sum: 41184
 </pre>
 </div>
 </div>
