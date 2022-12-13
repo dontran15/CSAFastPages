@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -173,6 +173,175 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuarterFinalTeam</span><span class="p">{</span>
+    <span class="n">String</span> <span class="n">jerseyColor</span><span class="p">;</span>
+    <span class="kt">boolean</span> <span class="n">quarterFinals</span><span class="p">;</span>
+    <span class="kt">boolean</span> <span class="n">semiFinals</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">QuarterFinalTeam</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">quarterFinals</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">determineResults</span><span class="p">(</span><span class="n">QuarterFinalTeam</span> <span class="n">team1</span><span class="p">,</span> <span class="n">QuarterFinalTeam</span> <span class="n">team2</span><span class="p">){</span>
+        <span class="n">team1</span><span class="p">.</span><span class="na">quarterFinalResult</span><span class="p">();</span>
+        <span class="n">team2</span><span class="p">.</span><span class="na">quarterFinalResult</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">quarterFinalResult</span><span class="p">(){}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="n">Netherlands</span> <span class="n">netherlands</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Netherlands</span><span class="p">();</span>
+        <span class="n">Argentina</span> <span class="n">argentina</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Argentina</span><span class="p">();</span>
+        <span class="n">Croatia</span> <span class="n">croatia</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Croatia</span><span class="p">();</span>
+        <span class="n">Brazil</span> <span class="n">brazil</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Brazil</span><span class="p">();</span>
+        <span class="n">England</span> <span class="n">england</span> <span class="o">=</span> <span class="k">new</span> <span class="n">England</span><span class="p">();</span>
+        <span class="n">France</span> <span class="n">france</span> <span class="o">=</span> <span class="k">new</span> <span class="n">France</span><span class="p">();</span>
+        <span class="n">Morocco</span> <span class="n">morocco</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Morocco</span><span class="p">();</span>
+        <span class="n">Portugal</span> <span class="n">portugal</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Portugal</span><span class="p">();</span>
+
+        <span class="n">QuarterFinalTeam</span><span class="p">.</span><span class="na">determineResults</span><span class="p">(</span><span class="n">netherlands</span><span class="p">,</span> <span class="n">argentina</span><span class="p">);</span>
+        <span class="n">QuarterFinalTeam</span><span class="p">.</span><span class="na">determineResults</span><span class="p">(</span><span class="n">croatia</span><span class="p">,</span> <span class="n">brazil</span><span class="p">);</span>
+        <span class="n">QuarterFinalTeam</span><span class="p">.</span><span class="na">determineResults</span><span class="p">(</span><span class="n">england</span><span class="p">,</span> <span class="n">france</span><span class="p">);</span>
+        <span class="n">QuarterFinalTeam</span><span class="p">.</span><span class="na">determineResults</span><span class="p">(</span><span class="n">morocco</span><span class="p">,</span> <span class="n">portugal</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Netherlands: "</span> <span class="o">+</span> <span class="s">"jerseyColor = "</span> <span class="o">+</span> <span class="n">netherlands</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">+</span> <span class="s">", quarterFinals = "</span> <span class="o">+</span> <span class="n">netherlands</span><span class="p">.</span><span class="na">quarterFinals</span> <span class="o">+</span> <span class="s">", semiFinals = "</span> <span class="o">+</span> <span class="n">netherlands</span><span class="p">.</span><span class="na">semiFinals</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Argentina: "</span> <span class="o">+</span> <span class="s">"jerseyColor = "</span> <span class="o">+</span> <span class="n">argentina</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">+</span> <span class="s">", quarterFinals = "</span> <span class="o">+</span> <span class="n">argentina</span><span class="p">.</span><span class="na">quarterFinals</span> <span class="o">+</span> <span class="s">", semiFinals = "</span> <span class="o">+</span> <span class="n">argentina</span><span class="p">.</span><span class="na">semiFinals</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Croatia: "</span> <span class="o">+</span> <span class="s">"jerseyColor = "</span> <span class="o">+</span> <span class="n">croatia</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">+</span> <span class="s">", quarterFinals = "</span> <span class="o">+</span> <span class="n">croatia</span><span class="p">.</span><span class="na">quarterFinals</span> <span class="o">+</span> <span class="s">", semiFinals = "</span> <span class="o">+</span> <span class="n">croatia</span><span class="p">.</span><span class="na">semiFinals</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Brazil: "</span> <span class="o">+</span> <span class="s">"jerseyColor = "</span> <span class="o">+</span> <span class="n">brazil</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">+</span> <span class="s">", quarterFinals = "</span> <span class="o">+</span> <span class="n">brazil</span><span class="p">.</span><span class="na">quarterFinals</span> <span class="o">+</span> <span class="s">", semiFinals = "</span> <span class="o">+</span> <span class="n">brazil</span><span class="p">.</span><span class="na">semiFinals</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"England: "</span> <span class="o">+</span> <span class="s">"jerseyColor = "</span> <span class="o">+</span> <span class="n">england</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">+</span> <span class="s">", quarterFinals = "</span> <span class="o">+</span> <span class="n">england</span><span class="p">.</span><span class="na">quarterFinals</span> <span class="o">+</span> <span class="s">", semiFinals = "</span> <span class="o">+</span> <span class="n">england</span><span class="p">.</span><span class="na">semiFinals</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"France: "</span> <span class="o">+</span> <span class="s">"jerseyColor = "</span> <span class="o">+</span> <span class="n">france</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">+</span> <span class="s">", quarterFinals = "</span> <span class="o">+</span> <span class="n">france</span><span class="p">.</span><span class="na">quarterFinals</span> <span class="o">+</span> <span class="s">", semiFinals = "</span> <span class="o">+</span> <span class="n">france</span><span class="p">.</span><span class="na">semiFinals</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Morocco: "</span> <span class="o">+</span> <span class="s">"jerseyColor = "</span> <span class="o">+</span> <span class="n">morocco</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">+</span> <span class="s">", quarterFinals = "</span> <span class="o">+</span> <span class="n">morocco</span><span class="p">.</span><span class="na">quarterFinals</span> <span class="o">+</span> <span class="s">", semiFinals = "</span> <span class="o">+</span> <span class="n">morocco</span><span class="p">.</span><span class="na">semiFinals</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Portugal: "</span> <span class="o">+</span> <span class="s">"jerseyColor = "</span> <span class="o">+</span> <span class="n">portugal</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">+</span> <span class="s">", quarterFinals = "</span> <span class="o">+</span> <span class="n">portugal</span><span class="p">.</span><span class="na">quarterFinals</span> <span class="o">+</span> <span class="s">", semiFinals = "</span> <span class="o">+</span> <span class="n">portugal</span><span class="p">.</span><span class="na">semiFinals</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Netherlands</span> <span class="kd">extends</span> <span class="n">QuarterFinalTeam</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Netherlands</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">=</span> <span class="s">"Orange"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">quarterFinalResult</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">semiFinals</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Argentina</span> <span class="kd">extends</span> <span class="n">QuarterFinalTeam</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Argentina</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">=</span> <span class="s">"Blue &amp; White"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">quarterFinalResult</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">semiFinals</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Croatia</span> <span class="kd">extends</span> <span class="n">QuarterFinalTeam</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Croatia</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">=</span> <span class="s">"Red &amp; White"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">quarterFinalResult</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">semiFinals</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Brazil</span> <span class="kd">extends</span> <span class="n">QuarterFinalTeam</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Brazil</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">=</span> <span class="s">"Yellow"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">quarterFinalResult</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">semiFinals</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">England</span> <span class="kd">extends</span> <span class="n">QuarterFinalTeam</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">England</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">=</span> <span class="s">"White &amp; Blue"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">quarterFinalResult</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">semiFinals</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">France</span> <span class="kd">extends</span> <span class="n">QuarterFinalTeam</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">France</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">=</span> <span class="s">"Blue White &amp; Red"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">quarterFinalResult</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">semiFinals</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Morocco</span> <span class="kd">extends</span> <span class="n">QuarterFinalTeam</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Morocco</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">=</span> <span class="s">"Red &amp; Green"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">quarterFinalResult</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">semiFinals</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Portugal</span> <span class="kd">extends</span> <span class="n">QuarterFinalTeam</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Portugal</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">jerseyColor</span> <span class="o">=</span> <span class="s">"Red &amp; Green"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">quarterFinalResult</span><span class="p">(){</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">semiFinals</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">QuarterFinalTeam</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Netherlands: jerseyColor = Orange, quarterFinals = true, semiFinals = false
+Argentina: jerseyColor = Blue &amp; White, quarterFinals = true, semiFinals = true
+Croatia: jerseyColor = Red &amp; White, quarterFinals = true, semiFinals = true
+Brazil: jerseyColor = Yellow, quarterFinals = true, semiFinals = false
+England: jerseyColor = White &amp; Blue, quarterFinals = true, semiFinals = false
+France: jerseyColor = Blue White &amp; Red, quarterFinals = true, semiFinals = true
+Morocco: jerseyColor = Red &amp; Green, quarterFinals = true, semiFinals = true
+Portugal: jerseyColor = Red &amp; Green, quarterFinals = true, semiFinals = false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
