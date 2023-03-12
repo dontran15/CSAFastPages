@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Structures | Don’s Fast Pages 💻</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Structures" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data structures notebook" />
+<meta property="og:description" content="Data structures notebook" />
+<link rel="canonical" href="https://dontran15.github.io/CSAFastPages/pbl/2023/03/09/data-structures.html" />
+<meta property="og:url" content="https://dontran15.github.io/CSAFastPages/pbl/2023/03/09/data-structures.html" />
+<meta property="og:site_name" content="Don’s Fast Pages 💻" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-09T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Structures" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-09T00:00:00-06:00","datePublished":"2023-03-09T00:00:00-06:00","description":"Data structures notebook","headline":"Data Structures","mainEntityOfPage":{"@type":"WebPage","@id":"https://dontran15.github.io/CSAFastPages/pbl/2023/03/09/data-structures.html"},"url":"https://dontran15.github.io/CSAFastPages/pbl/2023/03/09/data-structures.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/CSAFastPages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dontran15.github.io/CSAFastPages/feed.xml" title="Don's Fast Pages 💻" /><link rel="shortcut icon" type="image/x-icon" href="/CSAFastPages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/CSAFastPages/">Don&#39;s Fast Pages 💻</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/CSAFastPages/about/">Who Am I?? 🥸</a><a class="page-link" href="/CSAFastPages/_pages/college-board-notes.html">AP CSA College Board Notes</a><a class="page-link" href="/CSAFastPages/_pages/notes.html">AP CSA Notes</a><a class="page-link" href="/CSAFastPages/search/">Search</a><a class="page-link" href="/CSAFastPages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Data Structures</h1><p class="page-description">Data structures notebook</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-09T00:00:00-06:00" itemprop="datePublished">
+        Mar 9, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      9 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/CSAFastPages/categories/#pbl">pbl</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/dontran15/CSAFastPages/tree/master/_notebooks/2023-03-09-data-structures.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/CSAFastPages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/dontran15/CSAFastPages/master?filepath=_notebooks%2F2023-03-09-data-structures.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSAFastPages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/dontran15/CSAFastPages/blob/master/_notebooks/2023-03-09-data-structures.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/CSAFastPages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fdontran15%2FCSAFastPages%2Fblob%2Fmaster%2F_notebooks%2F2023-03-09-data-structures.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/CSAFastPages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Code-Exercise-Examples">Code Exercise Examples </a></li>
+<li class="toc-entry toc-h3"><a href="#Methods-and-Control-Structures">Methods and Control Structures </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Methods">Methods </a></li>
+<li class="toc-entry toc-h4"><a href="#Control-Structures">Control Structures </a></li>
+<li class="toc-entry toc-h4"><a href="#APCSA-FRQ-2017-Methods-and-Control-Structures">APCSA FRQ 2017 Methods and Control Structures </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#--https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf">- https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Exploring-teacher-code">Exploring teacher code </a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#Diverse-Array">Diverse Array </a></li>
+<li class="toc-entry toc-h5"><a href="#Matric">Matric </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h4"><a href="#Random">Random </a></li>
+<li class="toc-entry toc-h4"><a href="#Do-nothing-by-value">Do nothing by value </a></li>
+<li class="toc-entry toc-h4"><a href="#Int-by-Reference">Int by Reference </a></li>
+<li class="toc-entry toc-h4"><a href="#Menu">Menu </a></li>
+<li class="toc-entry toc-h3"><a href="#Method-and-Control-Structures">Method and Control Structures </a></li>
+<li class="toc-entry toc-h3"><a href="#Exploring-AP-Classroom">Exploring AP Classroom </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Data-Types">Data Types </a></li>
+<li class="toc-entry toc-h4"><a href="#Methods-and-Control-Structures">Methods and Control Structures </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-09-data-structures.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Code-Exercise-Examples">
+<a class="anchor" href="#Code-Exercise-Examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code Exercise Examples<a class="anchor-link" href="#Code-Exercise-Examples"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="c1">// int</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"integer:"</span><span class="p">);</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">intArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">intArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">floor</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">));</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"num"</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+    <span class="n">sum</span> <span class="o">+=</span> <span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sum: "</span> <span class="o">+</span> <span class="n">sum</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------"</span><span class="p">);</span>
+
+<span class="c1">// double</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"double:"</span><span class="p">);</span>
+<span class="kt">double</span> <span class="n">double1</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">double2</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">ratio</span> <span class="o">=</span> <span class="n">double1</span><span class="o">/</span><span class="n">double2</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"double1: "</span> <span class="o">+</span> <span class="n">double1</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"double1: "</span> <span class="o">+</span> <span class="n">double2</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"double1 / double2: "</span> <span class="o">+</span> <span class="n">ratio</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------"</span><span class="p">);</span>
+
+<span class="c1">// boolean</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"boolean:"</span><span class="p">);</span>
+<span class="kt">boolean</span> <span class="n">smelly</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span><span class="n">smelly</span><span class="p">){</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Ew you're smelly! Smelly: "</span> <span class="o">+</span> <span class="n">smelly</span> <span class="o">+</span> <span class="s">"Go take a shower!"</span><span class="p">);}</span>
+<span class="k">else</span><span class="p">{</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Good Job! Clean: "</span> <span class="o">+</span> <span class="o">!</span><span class="n">smelly</span><span class="p">);}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------"</span><span class="p">);</span>
+
+<span class="c1">// char</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"char:"</span><span class="p">);</span>
+<span class="kt">char</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">;</span>      
+<span class="c1">// 65 &amp; 67 are ASCII codes</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="mi">65</span><span class="p">;</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="sc">'B'</span><span class="p">;</span>
+<span class="n">c3</span> <span class="o">=</span> <span class="mi">67</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"c1 = 65; c2 = 'B'; c3 = 67;"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The characters are: "</span> <span class="o">+</span> <span class="n">c1</span> <span class="o">+</span> <span class="n">c2</span> <span class="o">+</span> <span class="n">c3</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------"</span><span class="p">);</span>
+
+
+<span class="c1">// Wrapper Classes</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Wrapper Classes:"</span><span class="p">);</span>
+
+<span class="c1">// Integer</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">intArrayList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">:</span> <span class="n">intArray</span><span class="p">){</span>
+    <span class="n">intArrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Integer</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"intArrayList: "</span> <span class="o">+</span> <span class="n">intArrayList</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+
+
+<span class="c1">// Double</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Double: "</span> <span class="o">+</span> <span class="k">new</span> <span class="n">Double</span><span class="p">(</span><span class="n">ratio</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
+
+<span class="c1">// Boolean</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Boolean: "</span> <span class="o">+</span> <span class="k">new</span> <span class="n">Boolean</span><span class="p">(</span><span class="n">smelly</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
+
+<span class="c1">// Character</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Character: "</span> <span class="o">+</span> <span class="k">new</span> <span class="n">Character</span><span class="p">(</span><span class="n">c1</span><span class="p">).</span><span class="na">toString</span><span class="p">()</span> <span class="o">+</span> <span class="k">new</span> <span class="n">Character</span><span class="p">(</span><span class="n">c2</span><span class="p">).</span><span class="na">toString</span><span class="p">()</span> <span class="o">+</span> <span class="k">new</span> <span class="n">Character</span><span class="p">(</span><span class="n">c3</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>--------------
+integer:
+num0: 99
+num1: 54
+num2: 46
+num3: 97
+num4: 68
+Sum: 364
+--------------
+--------------
+double:
+double1: 10.0
+double1: 3.0
+double1 / double2: 3.3333333333333335
+--------------
+--------------
+boolean:
+Ew you're smelly! Smelly: trueGo take a shower!
+--------------
+--------------
+char:
+c1 = 65; c2 = 'B'; c3 = 67;
+The characters are: ABC
+--------------
+--------------
+Wrapper Classes:
+intArrayList: [99, 54, 46, 97, 68]
+Double: 3.3333333333333335
+Boolean: true
+Character: ABC
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Methods-and-Control-Structures">
+<a class="anchor" href="#Methods-and-Control-Structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods and Control Structures<a class="anchor-link" href="#Methods-and-Control-Structures"> </a>
+</h3>
+<h4 id="Methods">
+<a class="anchor" href="#Methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods<a class="anchor-link" href="#Methods"> </a>
+</h4>
+<ul>
+<li>A method in Java is a block of code that, when called, performs specific actions mentioned in it.</li>
+<li>For instance, if you have written instructions to draw a circle in the method, it will do that task.</li>
+<li>You can insert values or parameters into methods, and they will only be executed when called.</li>
+<li>A method is similar to a function in other programming languages such as python</li>
+</ul>
+<h4 id="Control-Structures">
+<a class="anchor" href="#Control-Structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control Structures<a class="anchor-link" href="#Control-Structures"> </a>
+</h4>
+<ul>
+<li>Control Structures can be considered as the building blocks of computer programs.</li>
+<li>They are commands that enable a program to “take decisions”, following one path or another.</li>
+<li>A program is usually not limited to a linear sequence of instructions since during its process it may bifurcate, repeat code or bypass sections.</li>
+</ul>
+<h4 id="APCSA-FRQ-2017-Methods-and-Control-Structures">
+<a class="anchor" href="#APCSA-FRQ-2017-Methods-and-Control-Structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>APCSA FRQ 2017 Methods and Control Structures<a class="anchor-link" href="#APCSA-FRQ-2017-Methods-and-Control-Structures"> </a>
+</h4>
+<h2 id="--https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf">
+<a class="anchor" href="#--https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf" aria-hidden="true"><span class="octicon octicon-link"></span></a>- <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf">https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf</a><a class="anchor-link" href="#--https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-frq-2017.pdf"> </a>
+</h2>
+<h4 id="Exploring-teacher-code">
+<a class="anchor" href="#Exploring-teacher-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploring teacher code<a class="anchor-link" href="#Exploring-teacher-code"> </a>
+</h4>
+<h5 id="Diverse-Array">
+<a class="anchor" href="#Diverse-Array" aria-hidden="true"><span class="octicon octicon-link"></span></a>Diverse Array<a class="anchor-link" href="#Diverse-Array"> </a>
+</h5>
+<h5 id="Matric">
+<a class="anchor" href="#Matric" aria-hidden="true"><span class="octicon octicon-link"></span></a>Matric<a class="anchor-link" href="#Matric"> </a>
+</h5>
+<ul>
+<li>Contains methods and control structures</li>
+<li>Multiple methods that allow stuff to happen</li>
+<li>
+<p>Multiple control structures</p>
+<ul>
+<li>Loops<ul>
+<li>For</li>
+<li>While</li>
+</ul>
+</li>
+<li>If statements</li>
+</ul>
+</li>
+<li>
+<p>Fits within data types because contains arrays which is a data type</p>
+</li>
+<li>
+<p>Takeaway: most code segments no matter what they are on have to do with methods and control structures</p>
+</li>
+</ul>
+<h4 id="Random">
+<a class="anchor" href="#Random" aria-hidden="true"><span class="octicon octicon-link"></span></a>Random<a class="anchor-link" href="#Random"> </a>
+</h4>
+<ul>
+<li>Math.random</li>
+<li>Gives value between 0 and 1</li>
+<li>To get a random value between 7 and 9, double a Math.random value and add 7 to it</li>
+</ul>
+<h4 id="Do-nothing-by-value">
+<a class="anchor" href="#Do-nothing-by-value" aria-hidden="true"><span class="octicon octicon-link"></span></a>Do nothing by value<a class="anchor-link" href="#Do-nothing-by-value"> </a>
+</h4>
+<ul>
+<li>You're basically changing a variable but the variable doesn't actually change because it is changing the subvalue and not the actual value</li>
+<li>Changing a variable only happens at a large scale<ul>
+<li>Can't do it locally</li>
+</ul>
+</li>
+</ul>
+<h4 id="Int-by-Reference">
+<a class="anchor" href="#Int-by-Reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Int by Reference<a class="anchor-link" href="#Int-by-Reference"> </a>
+</h4>
+<ul>
+<li>The int changes its value even though you are doing it locally</li>
+<li>Basically says theres a way to get around the fact that you cant edit variables locally</li>
+</ul>
+<h4 id="Menu">
+<a class="anchor" href="#Menu" aria-hidden="true"><span class="octicon octicon-link"></span></a>Menu<a class="anchor-link" href="#Menu"> </a>
+</h4>
+<ul>
+<li>Try, Catch, Runnable are used to control program execution</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">package</span> <span class="nn">com.nighthawk.hacks.methodsDataTypes</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Menu: custom implementation</span>
+<span class="cm"> * @author     John Mortensen</span>
+<span class="cm"> *</span>
+<span class="cm"> * Uses String to contain Title for an Option</span>
+<span class="cm"> * Uses Runnable to store Class-Method to be run when Title is selected</span>
+<span class="cm"> */</span>
+
+<span class="c1">// The Menu Class has a HashMap of Menu Rows</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span> <span class="p">{</span>
+    <span class="c1">// Format</span>
+    <span class="c1">// Key {0, 1, 2, ...} created based on order of input menu</span>
+    <span class="c1">// Value {MenuRow0, MenuRow1, MenuRow2,...} each corresponds to key</span>
+    <span class="c1">// MenuRow  {&lt;Exit,Noop&gt;, Option1, Option2, ...}</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">MenuRow</span><span class="o">&gt;</span> <span class="n">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Constructor for Menu,</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param  rows,  is the row data for menu.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Menu</span><span class="p">(</span><span class="n">MenuRow</span><span class="o">[]</span> <span class="n">rows</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">MenuRow</span> <span class="n">row</span> <span class="p">:</span> <span class="n">rows</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Build HashMap for lookup convenience</span>
+            <span class="n">menu</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">i</span><span class="o">++</span><span class="p">,</span> <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="na">getTitle</span><span class="p">(),</span> <span class="n">row</span><span class="p">.</span><span class="na">getAction</span><span class="p">()));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Get Row from Menu,</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param  i,  HashMap key (k)</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  MenuRow, the selected menu</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">MenuRow</span> <span class="nf">get</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">menu</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Iterate through and print rows in HashMap</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">MenuRow</span><span class="o">&gt;</span> <span class="n">pair</span> <span class="p">:</span> <span class="n">menu</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">pair</span><span class="p">.</span><span class="na">getKey</span><span class="p">()</span> <span class="o">+</span> <span class="s">" ==&gt; "</span> <span class="o">+</span> <span class="n">pair</span><span class="p">.</span><span class="na">getValue</span><span class="p">().</span><span class="na">getTitle</span><span class="p">());</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  To test run Driver</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Driver</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="c1">// The MenuRow Class has title and action for individual line item in menu</span>
+<span class="kd">class</span> <span class="nc">MenuRow</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">title</span><span class="p">;</span>       <span class="c1">// menu item title</span>
+    <span class="n">Runnable</span> <span class="n">action</span><span class="p">;</span>    <span class="c1">// menu item action, using Runnable</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Constructor for MenuRow,</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param  title,  is the description of the menu item</span>
+<span class="cm">     * @param  action, is the run-able action for the menu item</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">MenuRow</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">Runnable</span> <span class="n">action</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">action</span> <span class="o">=</span> <span class="n">action</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Getters</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTitle</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="n">Runnable</span> <span class="nf">getAction</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">action</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Runs the action using Runnable (.run)</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">action</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// The Main Class illustrates initializing and using Menu with Runnable action</span>
+<span class="kd">class</span> <span class="nc">Driver</span> <span class="p">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     *  Menu Control Example</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Row initialize</span>
+        <span class="n">MenuRow</span><span class="o">[]</span> <span class="n">rows</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MenuRow</span><span class="o">[]</span><span class="p">{</span>
+            <span class="c1">// lambda style, () -&gt; to point to Class.Method</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Exit"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Do Nothing"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">DoNothingByValue</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Swap if Hi-Low"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">IntByReference</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Matrix Reverse"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Matrix</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Diverse Array"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Matrix</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)),</span>
+            <span class="k">new</span> <span class="n">MenuRow</span><span class="p">(</span><span class="s">"Random Squirrels"</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Number</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">))</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Menu construction</span>
+        <span class="n">Menu</span> <span class="n">menu</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Menu</span><span class="p">(</span><span class="n">rows</span><span class="p">);</span>
+
+        <span class="c1">// Run menu forever, exit condition contained in loop</span>
+        <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hacks Menu:"</span><span class="p">);</span>
+            <span class="c1">// print rows</span>
+            <span class="n">menu</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+
+            <span class="c1">// Scan for input</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">selection</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+                <span class="c1">// menu action</span>
+                <span class="k">try</span> <span class="p">{</span>
+                    <span class="n">MenuRow</span> <span class="n">row</span> <span class="o">=</span> <span class="n">menu</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">selection</span><span class="p">);</span>
+                    <span class="c1">// stop menu</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">"Exit"</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">scan</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> 
+                            <span class="n">scan</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>  <span class="c1">// scanner resource requires release</span>
+                        <span class="k">return</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="c1">// run option</span>
+                    <span class="n">row</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Invalid selection %d\n"</span><span class="p">,</span> <span class="n">selection</span><span class="p">);</span>
+                <span class="p">}</span>
+
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not a number"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Method-and-Control-Structures">
+<a class="anchor" href="#Method-and-Control-Structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Method and Control Structures<a class="anchor-link" href="#Method-and-Control-Structures"> </a>
+</h3>
+<ul>
+<li>
+<p>There are three kinds of control structures: Conditional Branches, which we use for choosing between two or more paths. There are three types in Java: if/else/else if, ternary operator and switch. Loops that are used to iterate through multiple values/objects and repeatedly run specific code blocks.</p>
+</li>
+<li>
+<p>MenuRow and Runnable are data types and also control structures</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exploring-AP-Classroom">
+<a class="anchor" href="#Exploring-AP-Classroom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploring AP Classroom<a class="anchor-link" href="#Exploring-AP-Classroom"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FrogSimulation</span>
+<span class="p">{</span>
+    <span class="cm">/** Distance, in inches, from the starting position to the goal. */</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">goalDistance</span><span class="p">;</span>
+
+    <span class="cm">/** Maximum number of hops allowed to reach the goal. */</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">maxHops</span><span class="p">;</span>
+
+    <span class="cm">/** Constructs a FrogSimulation where dist is the distance, in inches, from the starting</span>
+<span class="cm">    * position to the goal, and numHops is the maximum number of hops allowed to reach the goal.</span>
+<span class="cm">    * Precondition: dist &gt; 0; numHops &gt; 0</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="nf">FrogSimulation</span><span class="p">(</span><span class="kt">int</span> <span class="n">dist</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numHops</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="n">goalDistance</span> <span class="o">=</span> <span class="n">dist</span><span class="p">;</span>
+    <span class="n">maxHops</span> <span class="o">=</span> <span class="n">numHops</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/** Returns an integer representing the distance, in inches, to be moved when the frog hops.</span>
+<span class="cm">     */</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="nf">hopDistance</span><span class="p">()</span>
+    <span class="p">{</span> <span class="cm">/* implementation not shown */</span> 
+
+        <span class="c1">// Int datatype used because steps should be whole numbers</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/** Simulates a frog attempting to reach the goal as described in part (a).</span>
+<span class="cm">    * Returns true if the frog successfully reached or passed the goal during the simulation;</span>
+<span class="cm">    * false otherwise.</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">simulate</span><span class="p">()</span>
+    <span class="p">{</span> <span class="cm">/* to be implemented in part (a) */</span> 
+        <span class="kt">int</span> <span class="n">distance</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="c1">// if control structures catch any return conditions being met</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">maxHops</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">distance</span> <span class="o">+=</span> <span class="n">hopDistance</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&gt;=</span> <span class="n">goalDistance</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/** Runs num simulations and returns the proportion of simulations in which the frog</span>
+<span class="cm">    * successfully reached or passed the goal.</span>
+<span class="cm">    * Precondition: num &gt; 0</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">runSimulations</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span>
+    <span class="p">{</span> <span class="cm">/* to be implemented in part (b) */</span> 
+
+        <span class="c1">// Note the usage of the double datatype here</span>
+        <span class="c1">// When doubles are operated on with ints, the result is an integer</span>
+        <span class="kt">double</span> <span class="n">trueResults</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="c1">// if control structure differentiates between successful and unsuccessful simulations</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">simulate</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">trueResults</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Here a double and int are operated on together, resulting in another double</span>
+        <span class="k">return</span> <span class="n">trueResults</span> <span class="o">/</span> <span class="n">num</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">FrogSimulation</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FrogSimulation</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">simulate</span><span class="p">());</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">runSimulations</span><span class="p">(</span><span class="mi">100</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span> 
+
+<span class="n">FrogSimulation</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false
+0.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Data-Types">
+<a class="anchor" href="#Data-Types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Types<a class="anchor-link" href="#Data-Types"> </a>
+</h4>
+<p>There are 2 main datatypes present in the above code, which are:</p>
+<ul>
+<li>ints</li>
+<li>doubles</li>
+</ul>
+<p>Certain datatypes are better suited than others to model a situation; since the situation includes the distance per hop, the maximum distance, and the max number of hops are all whole numbers, ints are preferrable to use here.</p>
+<p>However, considering the output of runSimulations() being a ratio, a different datatype would be better suited: a double.</p>
+<h4 id="Methods-and-Control-Structures">
+<a class="anchor" href="#Methods-and-Control-Structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods and Control Structures<a class="anchor-link" href="#Methods-and-Control-Structures"> </a>
+</h4>
+<p>Control structures form the building blocks of most methods, allowing them to handle simple tasks such as filtering or calculating. In this case, the main methods are simulate() and runSimulations().</p>
+<p>simulate() utilizes both for loops, in order to iterate through the hops and their effect on distance, and if loops, in order to check if any one of the return conditions are met (negative distance, max hops, or reached distance).</p>
+<p>runSimulations() also takes advantage of for loops in order to run simulate() numerous times, using an if statement to distinguish between successful and unsuccessful simulations.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="dontran15/CSAFastPages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/CSAFastPages/pbl/2023/03/09/data-structures.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/CSAFastPages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://dontran15.github.io/CSAFastPages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/CSAFastPages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Don&#39;s blogging platform with Jupyter Notebooks 🥶</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
