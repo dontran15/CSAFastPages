@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Sort Week" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Hacks &amp; Explorations of Sorting with Queues, Stacks, Linked Lists, etc." />
-<meta property="og:description" content="Hacks &amp; Explorations of Sorting with Queues, Stacks, Linked Lists, etc." />
+<meta name="description" content="Hacks &amp; Explorations of Generics, Sorting, Queues, Stacks, Linked Lists, etc." />
+<meta property="og:description" content="Hacks &amp; Explorations of Generics, Sorting, Queues, Stacks, Linked Lists, etc." />
 <link rel="canonical" href="https://dontran15.github.io/CSAFastPages/collegeboard/2023/03/23/stuff.html" />
 <meta property="og:url" content="https://dontran15.github.io/CSAFastPages/collegeboard/2023/03/23/stuff.html" />
 <meta property="og:site_name" content="Don’s Fast Pages 💻" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Sort Week" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-23T00:00:00-05:00","datePublished":"2023-03-23T00:00:00-05:00","description":"Hacks &amp; Explorations of Sorting with Queues, Stacks, Linked Lists, etc.","headline":"Sort Week","mainEntityOfPage":{"@type":"WebPage","@id":"https://dontran15.github.io/CSAFastPages/collegeboard/2023/03/23/stuff.html"},"url":"https://dontran15.github.io/CSAFastPages/collegeboard/2023/03/23/stuff.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-23T00:00:00-05:00","datePublished":"2023-03-23T00:00:00-05:00","description":"Hacks &amp; Explorations of Generics, Sorting, Queues, Stacks, Linked Lists, etc.","headline":"Sort Week","mainEntityOfPage":{"@type":"WebPage","@id":"https://dontran15.github.io/CSAFastPages/collegeboard/2023/03/23/stuff.html"},"url":"https://dontran15.github.io/CSAFastPages/collegeboard/2023/03/23/stuff.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/CSAFastPages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dontran15.github.io/CSAFastPages/feed.xml" title="Don's Fast Pages 💻" /><link rel="shortcut icon" type="image/x-icon" href="/CSAFastPages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Sort Week</h1><p class="page-description">Hacks & Explorations of Sorting with Queues, Stacks, Linked Lists, etc.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-23T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Sort Week</h1><p class="page-description">Hacks & Explorations of Generics, Sorting, Queues, Stacks, Linked Lists, etc.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-23T00:00:00-05:00" itemprop="datePublished">
         Mar 23, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      4 min read
     
 </span></p>
 
@@ -124,6 +124,11 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Generic-Objects">Generic Objects </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Sub-Classes-(Motor-Vehicle,-Marine-Vehicle,-Aerial-Vehicle-Extends-Vehicle)">Sub Classes (Motor Vehicle, Marine Vehicle, Aerial Vehicle Extends Vehicle) </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h3"><a href="#Collection-Types">Collection Types </a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#Queues,-Stacks,-Linked-Lists,-and-Other-Collection-Types">Queues, Stacks, Linked Lists, and Other Collection Types </a></li>
@@ -142,10 +147,284 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Generic-Objects">
+<a class="anchor" href="#Generic-Objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generic Objects<a class="anchor-link" href="#Generic-Objects"> </a>
+</h3>
+<p>One of the key concepts of object oriented programming is the idea that objects can inherit from one another. Thus, it stands to reason that you can have a generic type class that holds as many generic properties as possible that can be inherited and overridden by subsequent subclasses. Breaking these down we essentially get a tree of objects that inherit from one another or implement methods from one another.</p>
+<p>Here, I'll make a generic class called vehicle which is based on Mr. M's "Collectable" object.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Vehicle</span> <span class="kd">implements</span> <span class="n">Comparable</span> <span class="o">&lt;</span><span class="n">Vehicle</span><span class="o">&gt;</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">masterType</span> <span class="o">=</span> <span class="s">"Vehicle"</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">type</span><span class="p">;</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     * Not sure what key types are for</span>
+<span class="cm">     * TODO: find out what enumeration is (enumeration, enumerated interfaces, etc.)</span>
+<span class="cm">     */</span>
+
+    <span class="c1">// enumerated interface</span>
+    <span class="c1">// public interface KeyTypes {</span>
+	<span class="c1">// 	String name();</span>
+	<span class="c1">// }</span>
+
+	<span class="c1">// protected abstract KeyTypes getKey(); // this method helps force usage of KeyTypes</span>
+
+    <span class="c1">// getter</span>
+	<span class="c1">// public String getMasterType() {</span>
+	<span class="c1">// 	return masterType;</span>
+	<span class="c1">// }</span>
+
+	<span class="c1">// get type</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getType</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">type</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// set type</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setType</span><span class="p">(</span><span class="n">String</span> <span class="n">type</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">type</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="c1">// this method is used to establish key order ???</span>
+	<span class="kd">public</span> <span class="kd">abstract</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">();</span>
+
+    <span class="c1">// this method is used to compare toString of objects, compares two object together</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="p">(</span><span class="n">Collectable</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">toString</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+	<span class="p">}</span>
+
+    <span class="c1">// static print method used by extended classes (generally can use to list objects)</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">Collectable</span><span class="o">[]</span> <span class="n">objs</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// print 'Object' properties</span>
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">objs</span><span class="p">.</span><span class="na">getClass</span><span class="p">()</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">objs</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+
+		<span class="c1">// print 'Collectable' properties</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">objs</span><span class="p">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">Collectable</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">objs</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>	<span class="c1">// Look at properties of 1st element</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+					<span class="n">obj</span><span class="p">.</span><span class="na">getMasterType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> 
+					<span class="n">obj</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span>
+					<span class="s">" listed by "</span> <span class="o">+</span>
+					<span class="n">obj</span><span class="p">.</span><span class="na">getKey</span><span class="p">());</span>
+		<span class="p">}</span>
+
+		<span class="c1">// print "Collectable: Objects'</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span> <span class="p">:</span> <span class="n">objs</span><span class="p">)</span>	<span class="c1">// observe that type is Opaque</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
+
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Sub-Classes-(Motor-Vehicle,-Marine-Vehicle,-Aerial-Vehicle-Extends-Vehicle)">
+<a class="anchor" href="#Sub-Classes-(Motor-Vehicle,-Marine-Vehicle,-Aerial-Vehicle-Extends-Vehicle)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sub Classes (Motor Vehicle, Marine Vehicle, Aerial Vehicle Extends Vehicle)<a class="anchor-link" href="#Sub-Classes-(Motor-Vehicle,-Marine-Vehicle,-Aerial-Vehicle-Extends-Vehicle)"> </a>
+</h4>
+<p>Through a generic class (vehicles in this case), we can inherit general methods and properties before building them up. For simplicity, I'll make some implementations of sub classes and focus in on motor vehicles and cars.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Engine</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">engineType</span> <span class="o">=</span> <span class="s">"Diesal"</span><span class="p">;</span> <span class="c1">// Default</span>
+    <span class="kt">boolean</span> <span class="n">engineOn</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">powerOn</span><span class="p">();</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">powerOff</span><span class="p">();</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setEngineType</span><span class="p">(</span><span class="n">String</span> <span class="n">type</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="kd">extends</span> <span class="n">Vehicle</span> <span class="kd">implements</span> <span class="n">Engine</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span><span class="n">Car</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">fuelType</span><span class="p">,</span> <span class="n">capacity</span><span class="p">,</span> <span class="n">numberOfWheels</span><span class="p">}</span>
+
+	<span class="c1">// Instance data</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">engine</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">motorType</span><span class="p">;</span>
+
+	<span class="c1">// Constructor</span>
+	<span class="kd">public</span> <span class="nf">Car</span><span class="p">(</span><span class="n">String</span> <span class="n">motorVehicleType</span><span class="p">,</span> <span class="n">String</span> <span class="n">motorType</span><span class="p">){</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"MotorVehicle"</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">frosting</span> <span class="o">=</span> <span class="n">motorVehicleType</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">flavor</span> <span class="o">=</span> <span class="n">motorType</span><span class="p">;</span>
+	<span class="p">}</span>
+
+    <span class="cm">/* </span>
+<span class="cm">     * 'Vehicle' requires getKey to help enforce KeyTypes usage </span>
+<span class="cm">     * Mort's Code TODO: Understand key types</span>
+<span class="cm">    */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">MotorVehicle</span><span class="p">.</span><span class="na">key</span><span class="p">;</span> <span class="p">}</span>
+
+	<span class="cm">/* </span>
+<span class="cm">     * 'Vehicle' requires toString override (overrides are required if abstract method)</span>
+<span class="cm">	 * toString provides data based off of Static Key setting</span>
+<span class="cm">     * TODO: Understand this toString Method</span>
+<span class="cm">	 */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>		
+		<span class="n">String</span> <span class="n">output</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">motorVehicleType</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">motorVehicleType</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">motorType</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">motorType</span><span class="p">;</span>
+			<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			    <span class="n">output</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">motorVehicleType</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">motorType</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// Test data initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">MotorVehicle</span><span class="o">[]</span> <span class="nf">motorVehicles</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="n">MotorVehicle</span><span class="o">[]</span><span class="p">{</span>
+				<span class="k">new</span> <span class="n">MotorVehicle</span><span class="p">(</span><span class="s">"Red"</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">"Red Velvet"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Orange"</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">"Orange"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Yellow"</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s">"Lemon"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Green"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">"Apple"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Blue"</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s">"Blueberry"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Purple"</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s">"Blackberry"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Pink"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">"Strawberry"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Tan"</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="s">"Vanilla"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Brown"</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">"Chocolate"</span><span class="p">),</span>
+		<span class="p">};</span>
+	<span class="p">}</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// Inheritance Hierarchy</span>
+		<span class="n">Cupcake</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">cupcakes</span><span class="p">();</span>  <span class="c1">// Array is reference type only, no methods</span>
+		<span class="n">List</span><span class="o">&lt;</span><span class="n">Cupcake</span><span class="o">&gt;</span> <span class="n">cupcakes</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Cupcake</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">objs</span><span class="p">));</span>  <span class="c1">// conversion required to make it a Collection</span>
+
+		<span class="c1">// print with title</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">);</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+
+		<span class="c1">// convert to Coolection and sort in flavor order</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">flavor</span><span class="p">);</span>
+		<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">cupcakes</span><span class="p">);</span>  <span class="c1">// This works because of Collectable compareTo method</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">);</span>
+		<span class="k">for</span> <span class="p">(</span><span class="n">Cupcake</span> <span class="n">cupcake</span> <span class="p">:</span> <span class="n">cupcakes</span><span class="p">)</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">cupcake</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">MotorVehicle</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MarineVehicle</span> <span class="cm">/* extends Vehicle */</span> <span class="p">{</span>
+    <span class="cm">/* implementation not shown */</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AerialVehicle</span> <span class="cm">/* extends Vehicle */</span> <span class="p">{</span>
+    <span class="cm">/* implementation not shown */</span> 
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	</span><span class="ansi-black-intense-fg ansi-bold">Cupcake(String motorVehicleType, String motorType)</span>
+<span class="ansi-red-intense-fg ansi-bold">invalid method declaration; return type required</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Sort</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Sort</span><span class="p">(){}</span>
+
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">sort</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">collection</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BubbleSort</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">Sort</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">BubbleSort</span><span class="p">()</span> <span class="p">{}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">Collection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">sort</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">collection</span><span class="p">)</span> <span class="p">{</span>
+        
+        
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span> 
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Collection-Types">
 <a class="anchor" href="#Collection-Types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collection Types<a class="anchor-link" href="#Collection-Types"> </a>
 </h3>
-<p>Collection types are built in Java Objects used to store a "collection" of other objects/data. They are used to manage a group of data encapsulated as one generic grouping.</p>
+<p>Collection types are built in Java Objects used to store a "collection" of other objects/data. They are used to manage a group of data encapsulated as one generic grouping. This is very similar to the idea of a generic type in that collections too can be treed down to create new types of collections. For instance collections inherit from one another and can be implemented in new ways.</p>
 <h4 id="Queues,-Stacks,-Linked-Lists,-and-Other-Collection-Types">
 <a class="anchor" href="#Queues,-Stacks,-Linked-Lists,-and-Other-Collection-Types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Queues, Stacks, Linked Lists, and Other Collection Types<a class="anchor-link" href="#Queues,-Stacks,-Linked-Lists,-and-Other-Collection-Types"> </a>
 </h4>
