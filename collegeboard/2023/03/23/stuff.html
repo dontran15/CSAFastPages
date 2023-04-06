@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      13 min read
     
 </span></p>
 
@@ -327,7 +327,7 @@ window.onload = wrap_img;
 	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">capacity</span><span class="p">;</span>
 
 	<span class="c1">// static id counter</span>
-	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">long</span> <span class="n">uniqueID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">uniqueID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
 	<span class="c1">// Constructor</span>
 	<span class="kd">public</span> <span class="nf">Car</span><span class="p">(</span><span class="n">String</span> <span class="n">brand</span><span class="p">,</span> <span class="n">String</span> <span class="n">model</span><span class="p">,</span> <span class="n">Engine</span> <span class="n">engine</span><span class="p">,</span> <span class="kt">int</span> <span class="n">capacity</span><span class="p">){</span>
@@ -383,31 +383,53 @@ window.onload = wrap_img;
 		<span class="p">}</span> 
 	<span class="p">}</span>
 
-	<span class="kd">public</span> <span class="n">String</span> <span class="nf">generateNumber</span><span class="p">(</span><span class="n">Car</span> <span class="n">car</span><span class="p">){</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">generateNumber</span><span class="p">(){</span>
 		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">())){</span>
-			<span class="n">uniqueId</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-			<span class="k">return</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">uniqueID</span><span class="p">);</span>
+			<span class="n">uniqueID</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+			<span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+			<span class="n">String</span> <span class="n">id</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+			<span class="n">id</span> <span class="o">+=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span> <span class="n">c</span><span class="p">);</span>
+			<span class="n">id</span> <span class="o">+=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">uniqueID</span><span class="p">);</span>
+
+			<span class="k">return</span> <span class="n">id</span><span class="p">;</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">brand</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="n">uniqueId</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-			<span class="k">return</span> <span class="n">String</span><span class="p">.</span><span class="na">value</span>
-		<span class="p">}</span>  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">capacity</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">())){</span>
+			<span class="n">uniqueID</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+			<span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">brand</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 
+			<span class="n">String</span> <span class="n">id</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+			<span class="n">id</span> <span class="o">+=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span> <span class="n">c</span><span class="p">);</span>
+			<span class="n">id</span> <span class="o">+=</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">uniqueID</span><span class="p">);</span>
+
+			<span class="k">return</span> <span class="n">id</span><span class="p">;</span>
+		<span class="p">}</span>  <span class="k">else</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="s">""</span><span class="p">;</span>
 		<span class="p">}</span>
-
-		<span class="n">uniqueId</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-		<span class="k">return</span> <span class="s">""</span><span class="p">;</span>
 	<span class="p">}</span>
 
 	<span class="c1">// creates hash of registration numbers</span>
 	<span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Car</span><span class="o">&gt;</span> <span class="nf">registrationNumber</span><span class="p">(</span><span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span><span class="p">){</span>
 		<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Car</span><span class="o">&gt;</span> <span class="n">numberToCar</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-
-		
-
 		<span class="k">for</span> <span class="p">(</span><span class="n">Car</span> <span class="n">car</span> <span class="p">:</span> <span class="n">cars</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">numberToCar</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="na">generateNumber</span><span class="p">(),</span> <span class="n">car</span><span class="p">);</span>
+		<span class="p">}</span>
 
+		<span class="k">return</span> <span class="n">numberToCar</span><span class="p">;</span>
+	<span class="p">}</span>
 
-			<span class="n">numberToCar</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">""</span><span class="p">,</span> <span class="n">car</span><span class="p">);</span>
+	<span class="c1">// creates list of numbers based on cars</span>
+	<span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">carNumberList</span><span class="p">(</span><span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span><span class="p">){</span>
+		<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">numberArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+		<span class="k">for</span> <span class="p">(</span><span class="n">Car</span> <span class="n">car</span> <span class="p">:</span> <span class="n">cars</span><span class="p">){</span>
+			<span class="n">numberArray</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="na">generateNumber</span><span class="p">());</span>
+		<span class="p">}</span>
+
+		<span class="k">return</span> <span class="n">numberArray</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">printCars</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">numberArray</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Car</span><span class="o">&gt;</span> <span class="n">map</span><span class="p">){</span>
+		<span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">number</span> <span class="p">:</span> <span class="n">numberArray</span><span class="p">){</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">number</span><span class="p">));</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
 	
@@ -431,20 +453,37 @@ window.onload = wrap_img;
 		<span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span> <span class="o">=</span> <span class="n">cars</span><span class="p">();</span>  <span class="c1">// Array is reference type only, no methods</span>
 		<span class="n">List</span><span class="o">&lt;</span><span class="n">Car</span><span class="o">&gt;</span> <span class="n">carsList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Car</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">cars</span><span class="p">));</span>  <span class="c1">// conversion required to make it a Collection</span>
 
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------"</span><span class="p">);</span>
+
 		<span class="c1">// print with brand order</span>
 		<span class="n">Car</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">brand</span><span class="p">);</span>
 		<span class="n">Car</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cars</span><span class="p">);</span>
 
+		<span class="k">for</span> <span class="p">(</span><span class="n">Car</span> <span class="n">car</span> <span class="p">:</span> <span class="n">carsList</span><span class="p">)</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car</span><span class="p">);</span> 
+
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------"</span><span class="p">);</span>
+
 		<span class="c1">// convert to Collection and sort in model order</span>
 		<span class="n">Car</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">model</span><span class="p">);</span>
 		<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">carsList</span><span class="p">);</span>  <span class="c1">// This works because of Collectable compareTo method</span>
-
 		<span class="n">Car</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cars</span><span class="p">);</span>
+		<span class="k">for</span> <span class="p">(</span><span class="n">Car</span> <span class="n">car</span> <span class="p">:</span> <span class="n">carsList</span><span class="p">)</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
+
+		
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------"</span><span class="p">);</span>
 
 		<span class="c1">// convert to Collection and sort in capacity order</span>
 		<span class="n">Car</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">capacity</span><span class="p">);</span>
 		<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">carsList</span><span class="p">);</span>  <span class="c1">// This works because of Collectable compareTo method</span>
 		<span class="n">Car</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cars</span><span class="p">);</span> <span class="c1">// doesn't sort properly but oh well LOL</span>
+
+		<span class="k">for</span> <span class="p">(</span><span class="n">Car</span> <span class="n">car</span> <span class="p">:</span> <span class="n">carsList</span><span class="p">)</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
+		
+		
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"-------------------------"</span><span class="p">);</span>
 	<span class="p">}</span>
 <span class="p">}</span>
 
@@ -469,7 +508,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>class [LREPL.$JShell$12I$Car; 9
+<pre>-------------------------
+class [LREPL.$JShell$12BE$Car; 9
 Vehicle: Car listed by brand
 Honda
 Toyota
@@ -481,7 +521,17 @@ Chevrolet
 Hyundai
 Ford
 
-class [LREPL.$JShell$12I$Car; 9
+Honda
+Toyota
+Chrysler
+Tesla
+Mercedes
+BMW
+Chevrolet
+Hyundai
+Ford
+-------------------------
+class [LREPL.$JShell$12BE$Car; 9
 Vehicle: Car listed by model
 Civic
 Mirai
@@ -493,7 +543,17 @@ Some Car Model
 Some Car Model
 Some Car Model
 
-class [LREPL.$JShell$12I$Car; 9
+Civic
+Mirai
+Model 3
+Some Car Model
+Some Car Model
+Some Car Model
+Some Car Model
+Some Card Model
+Voyager
+-------------------------
+class [LREPL.$JShell$12BE$Car; 9
 Vehicle: Car listed by capacity
 5
 5
@@ -505,6 +565,16 @@ Vehicle: Car listed by capacity
 6
 4
 
+4
+5
+5
+5
+5
+6
+7
+7
+7
+-------------------------
 </pre>
 </div>
 </div>
@@ -566,7 +636,7 @@ Vehicle: Car listed by capacity
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="n">Vehicle</span><span class="o">[]</span> <span class="nf">sortVehicles</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Vehicle</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span><span class="p">){</span>
-        
+        <span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span> <span class="o">=</span> <span class="n">Car</span><span class="p">.</span><span class="na">cars</span><span class="p">();</span>
 
         <span class="k">return</span> <span class="n">cars</span><span class="p">;</span>
     <span class="p">}</span>
@@ -829,8 +899,7 @@ Vehicle: Car listed by capacity
         <span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span> <span class="o">=</span> <span class="n">Car</span><span class="p">.</span><span class="na">cars</span><span class="p">();</span>
 
         <span class="n">Car</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Car</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">model</span><span class="p">);</span>
-        <span class="n">Bubble</span>
-        <span class="n">bubbleSort</span><span class="p">.</span><span class="na">sortVehicles</span><span class="p">(</span><span class="n">Vehicle</span><span class="p">.</span><span class="na">mapAscii</span><span class="p">(</span><span class="n">cars</span><span class="p">));</span>
+        <span class="c1">// bubbleSort.sortVehicles(Vehicle.mapAscii(cars));</span>
         
     <span class="p">}</span>
 <span class="p">}</span>
@@ -926,7 +995,7 @@ Vehicle: Car listed by capacity
             
             <span class="c1">// check look up time for hash map</span>
             <span class="kt">long</span> <span class="n">time</span> <span class="o">=</span> <span class="p">(</span><span class="n">binarySearch</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">num</span><span class="p">));</span>
-            <span class="n">luTime</span> <span class="o">+=</span> <span class="n">time</span><span class="p">;</span>
+            <span class="n">bsTime</span> <span class="o">+=</span> <span class="n">time</span><span class="p">;</span>
 
             <span class="k">if</span> <span class="p">(</span><span class="n">time</span> <span class="o">&gt;</span> <span class="n">smallestTime</span><span class="p">){</span>
                 <span class="n">smallestTime</span> <span class="o">=</span> <span class="n">time</span><span class="p">;</span>
@@ -944,7 +1013,7 @@ Vehicle: Car listed by capacity
         <span class="n">bsTime</span> <span class="o">-=</span> <span class="n">smallestTime</span><span class="p">;</span>
         <span class="n">bsTime</span> <span class="o">-=</span> <span class="n">largestTime</span><span class="p">;</span>
 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average: "</span> <span class="o">+</span> <span class="p">(</span><span class="n">luTime</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="s">" ns (excluding shortest time: "</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">largestTime</span><span class="p">)</span> <span class="o">+</span> <span class="s">" ns and, longest time "</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">smallestTime</span><span class="p">)</span> <span class="o">+</span> <span class="s">" ns)"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average: "</span> <span class="o">+</span> <span class="p">(</span><span class="n">bsTime</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="s">" ns (excluding shortest time: "</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">largestTime</span><span class="p">)</span> <span class="o">+</span> <span class="s">" ns and, longest time "</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">smallestTime</span><span class="p">)</span> <span class="o">+</span> <span class="s">" ns)"</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">lookUp</span><span class="p">(</span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
@@ -992,35 +1061,35 @@ Vehicle: Car listed by capacity
 hash map look up
 --------------------------------
 Enter a number to search for: 
-6357 ns
-1163 ns
-436 ns
-326 ns
-433 ns
-667 ns
-369 ns
-257 ns
-265 ns
-273 ns
-235 ns
-368 ns
-Average: 455.7 ns (excluding shortest time: 235.0 ns and, longest time 6357.0 ns)
+16177 ns
+795 ns
+322 ns
+117 ns
+141 ns
+152 ns
+207 ns
+123 ns
+218 ns
+173 ns
+137 ns
+524 ns
+Average: 279.2 ns (excluding shortest time: 117.0 ns and, longest time 16177.0 ns)
 --------------------------------
 binary search
 --------------------------------
-9147 ns
-4084 ns
-2594 ns
-2362 ns
-2440 ns
-2377 ns
-2876 ns
-2725 ns
-2107 ns
-2796 ns
-2461 ns
-2434 ns
-Average: 4296.0 ns (excluding shortest time: 2107.0 ns and, longest time 9147.0 ns)
+1223 ns
+349 ns
+257 ns
+240 ns
+208 ns
+168 ns
+245 ns
+149 ns
+153 ns
+276 ns
+585 ns
+220 ns
+Average: 270.1 ns (excluding shortest time: 149.0 ns and, longest time 1223.0 ns)
 </pre>
 </div>
 </div>
