@@ -198,7 +198,7 @@ window.onload = wrap_img;
 	<span class="kd">public</span> <span class="kd">abstract</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">();</span>
 
 	<span class="c1">// builds ascii string and converts back</span>
-	<span class="c1">// public abstract long toAscii(String key);</span>
+	<span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">long</span> <span class="nf">toAscii</span><span class="p">();</span>
 
     <span class="c1">// this method is used to compare toString of objects, compares two object together</span>
 	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="p">(</span><span class="n">Vehicle</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
@@ -361,21 +361,19 @@ window.onload = wrap_img;
 		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
 	<span class="p">}</span>
 
-	<span class="c1">// @Override</span>
-	<span class="c1">// public long toAscii(){</span>
-	<span class="c1">// 	if (KeyType.capacity.equals(this.getKey())){</span>
-	<span class="c1">// 		return Long.valueOf(this.capacity);</span>
-	<span class="c1">// 	} else if (KeyType.brand.equals(this.getKey())) {</span>
-	<span class="c1">// 		return Long.valueOf((int) this.brand.charAt(0));</span>
-	<span class="c1">// 	} else if (KeyType.model.equals(this.getKey())) {</span>
-	<span class="c1">// 		return Long.valueOf((int) this.model.charAt(0));</span>
-	<span class="c1">// 	} else {</span>
-	<span class="c1">// 		return -1;</span>
-	<span class="c1">// 	}</span>
-		
-	<span class="c1">// 	// dk how to do multiple long way (can ask abt this)</span>
-		
-	<span class="c1">// }</span>
+	<span class="c1">// dk how to do multiple long values way (can ask abt this)</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">long</span> <span class="nf">toAscii</span><span class="p">(){</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">capacity</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">())){</span>
+			<span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)(</span><span class="k">this</span><span class="p">.</span><span class="na">capacity</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">brand</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)((</span><span class="kt">int</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="na">brand</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)((</span><span class="kt">int</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 
 	<span class="c1">// Test data initializer</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Car</span><span class="o">[]</span> <span class="nf">cars</span><span class="p">()</span> <span class="p">{</span>
@@ -411,7 +409,7 @@ window.onload = wrap_img;
 		<span class="c1">// convert to Collection and sort in capacity order</span>
 		<span class="n">Car</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">capacity</span><span class="p">);</span>
 		<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">carsList</span><span class="p">);</span>  <span class="c1">// This works because of Collectable compareTo method</span>
-		<span class="n">Car</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cars</span><span class="p">);</span>
+		<span class="n">Car</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cars</span><span class="p">);</span> <span class="c1">// doesnt sort properly but oh well LOL</span>
 	<span class="p">}</span>
 <span class="p">}</span>
 
@@ -436,7 +434,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>class [LREPL.$JShell$12D$Car; 9
+<pre>class [LREPL.$JShell$12E$Car; 9
 Vehicle: Car listed by brand
 Honda
 Toyota
@@ -448,7 +446,7 @@ Chevrolet
 Hyundai
 Ford
 
-class [LREPL.$JShell$12D$Car; 9
+class [LREPL.$JShell$12E$Car; 9
 Vehicle: Car listed by model
 Civic
 Mirai
@@ -460,7 +458,7 @@ Some Car Model
 Some Car Model
 Some Car Model
 
-class [LREPL.$JShell$12D$Car; 9
+class [LREPL.$JShell$12E$Car; 9
 Vehicle: Car listed by capacity
 5
 5
