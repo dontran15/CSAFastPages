@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      8 min read
     
 </span></p>
 
@@ -198,7 +198,9 @@ window.onload = wrap_img;
 	<span class="kd">public</span> <span class="kd">abstract</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">();</span>
 
 	<span class="c1">// builds ascii string and converts back</span>
-	<span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">long</span> <span class="nf">toAscii</span><span class="p">();</span>
+	<span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">int</span> <span class="nf">toAscii</span><span class="p">();</span>
+
+	<span class="kd">public</span> <span class="kd">abstract</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">mapAscii</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">list</span><span class="p">);</span>
 
     <span class="c1">// this method is used to compare toString of objects, compares two object together</span>
 	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="p">(</span><span class="n">Vehicle</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
@@ -243,6 +245,100 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public abstract class Vehicle implements Comparable &lt;Vehicle&gt;{</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public final String masterType = "Vehicle";</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    private String type;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    /*</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     * Not sure what key types are for</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     * TODO: find out what enumeration is (enumeration, enumerated interfaces, etc.)</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">     */</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    // enumerated interface</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public interface KeyTypes {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		String name();</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	}</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	protected abstract KeyTypes getKey(); // this method helps force usage of KeyTypes</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    // getter</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public String getMasterType() {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		return masterType;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	}</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// get type</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public String getType() {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		return type;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	}</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// set type</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public void setType(String type) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		this.type = type;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	}</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// this method is used to establish key order ???</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public abstract String toString();</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// builds ascii string and converts back</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public abstract int toAscii();</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public abstract Map&lt;T, Integer&gt; mapAscii(List&lt;T&gt; list);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    // this method is used to compare toString of objects, compares two object together</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public int compareTo(Vehicle obj) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		return this.toString().compareTo(obj.toString());</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	}</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// this method is used to compare toAscii of objects, compares two objects together</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// public int asciiCompareTo(Vehicle obj) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// 	if(this.toAscii() &gt; obj.toAscii()){</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// 		return 1;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// 	} else if(this.toAscii() == obj.toAscii()){</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// 		return 0;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// 	} else if (this.toAscii() &lt; obj.toAscii()){</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// 		return -1;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// 	} else {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// 		return -2;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// 	}</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	// }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    // static print method used by extended classes (generally can use to list objects)</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">	public static void print(Vehicle[] objs) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		// print 'Object' properties</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		System.out.println(objs.getClass() + " " + objs.length);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		// print 'Vehicle' properties</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		if (objs.length &gt; 0) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">			Vehicle obj = objs[0];	// Look at properties of 1st element</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">			System.out.println(</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">					obj.getMasterType() + ": " + </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">					obj.getType() +</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">					" listed by " +</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">					obj.getKey());</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		}</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		// print "Vehicle: Objects'</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		for(Object o : objs)	// observe that type is Opaque</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">			System.out.println(o);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">		System.out.println();</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
+<span class="ansi-red-intense-fg ansi-bold">Unresolved dependencies:</span>
+<span class="ansi-red-intense-fg ansi-bold">   - class T</span></pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -363,16 +459,26 @@ window.onload = wrap_img;
 
 	<span class="c1">// dk how to do multiple long values way (can ask abt this)</span>
 	<span class="nd">@Override</span>
-	<span class="kd">public</span> <span class="kt">long</span> <span class="nf">toAscii</span><span class="p">(){</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">toAscii</span><span class="p">(){</span>
 		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">capacity</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">())){</span>
-			<span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)(</span><span class="k">this</span><span class="p">.</span><span class="na">capacity</span><span class="p">);</span>
+			<span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">capacity</span><span class="p">;</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">brand</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)((</span><span class="kt">int</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="na">brand</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+			<span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="na">brand</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)((</span><span class="kt">int</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+			<span class="k">return</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="na">model</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-			<span class="k">return</span> <span class="p">(</span><span class="kt">long</span><span class="p">)(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+			<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="c1">// @Override</span>
+	<span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">Car</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">mapAscii</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Car</span><span class="o">&gt;</span> <span class="n">cars</span><span class="p">){</span>
+		<span class="n">Map</span><span class="o">&lt;</span><span class="n">Car</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">asciiMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+		<span class="k">for</span> <span class="p">(</span><span class="n">Car</span> <span class="n">car</span> <span class="p">:</span> <span class="n">cars</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">asciiMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">car</span><span class="p">,</span> <span class="n">car</span><span class="p">.</span><span class="na">toAscii</span><span class="p">());</span>
+		<span class="p">}</span>
+
+		<span class="k">return</span> <span class="n">asciiMap</span><span class="p">;</span>
 	<span class="p">}</span>
 
 	<span class="c1">// Test data initializer</span>
@@ -390,8 +496,7 @@ window.onload = wrap_img;
 		<span class="p">};</span>
 	<span class="p">}</span>
 	
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
-	<span class="p">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
 		<span class="c1">// Inheritance Hierarchy</span>
 		<span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span> <span class="o">=</span> <span class="n">cars</span><span class="p">();</span>  <span class="c1">// Array is reference type only, no methods</span>
 		<span class="n">List</span><span class="o">&lt;</span><span class="n">Car</span><span class="o">&gt;</span> <span class="n">carsList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Car</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">cars</span><span class="p">));</span>  <span class="c1">// conversion required to make it a Collection</span>
@@ -409,7 +514,7 @@ window.onload = wrap_img;
 		<span class="c1">// convert to Collection and sort in capacity order</span>
 		<span class="n">Car</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">capacity</span><span class="p">);</span>
 		<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">carsList</span><span class="p">);</span>  <span class="c1">// This works because of Collectable compareTo method</span>
-		<span class="n">Car</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cars</span><span class="p">);</span> <span class="c1">// doesnt sort properly but oh well LOL</span>
+		<span class="n">Car</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">cars</span><span class="p">);</span> <span class="c1">// doesn't sort properly but oh well LOL</span>
 	<span class="p">}</span>
 <span class="p">}</span>
 
@@ -434,7 +539,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>class [LREPL.$JShell$12E$Car; 9
+<pre>class [LREPL.$JShell$12F$Car; 9
 Vehicle: Car listed by brand
 Honda
 Toyota
@@ -446,7 +551,7 @@ Chevrolet
 Hyundai
 Ford
 
-class [LREPL.$JShell$12E$Car; 9
+class [LREPL.$JShell$12F$Car; 9
 Vehicle: Car listed by model
 Civic
 Mirai
@@ -458,7 +563,7 @@ Some Car Model
 Some Car Model
 Some Car Model
 
-class [LREPL.$JShell$12E$Car; 9
+class [LREPL.$JShell$12F$Car; 9
 Vehicle: Car listed by capacity
 5
 5
