@@ -408,7 +408,7 @@ window.onload = wrap_img;
 	<span class="p">}</span>
 
 	<span class="c1">// creates hash of registration numbers</span>
-	<span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Car</span><span class="o">&gt;</span> <span class="nf">registrationNumber</span><span class="p">(</span><span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span><span class="p">){</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Car</span><span class="o">&gt;</span> <span class="nf">registrationNumber</span><span class="p">(</span><span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span><span class="p">){</span>
 		<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Car</span><span class="o">&gt;</span> <span class="n">numberToCar</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 		<span class="k">for</span> <span class="p">(</span><span class="n">Car</span> <span class="n">car</span> <span class="p">:</span> <span class="n">cars</span><span class="p">)</span> <span class="p">{</span>
 			<span class="n">numberToCar</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="na">generateNumber</span><span class="p">(),</span> <span class="n">car</span><span class="p">);</span>
@@ -418,7 +418,7 @@ window.onload = wrap_img;
 	<span class="p">}</span>
 
 	<span class="c1">// creates list of numbers based on cars</span>
-	<span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">carNumberList</span><span class="p">(</span><span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span><span class="p">){</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">carNumberList</span><span class="p">(</span><span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span><span class="p">){</span>
 		<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">numberArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 		<span class="k">for</span> <span class="p">(</span><span class="n">Car</span> <span class="n">car</span> <span class="p">:</span> <span class="n">cars</span><span class="p">){</span>
 			<span class="n">numberArray</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">car</span><span class="p">.</span><span class="na">generateNumber</span><span class="p">());</span>
@@ -427,7 +427,7 @@ window.onload = wrap_img;
 		<span class="k">return</span> <span class="n">numberArray</span><span class="p">;</span>
 	<span class="p">}</span>
 	
-	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">printCars</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">numberArray</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Car</span><span class="o">&gt;</span> <span class="n">map</span><span class="p">){</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printCars</span><span class="p">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">numberArray</span><span class="p">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Car</span><span class="o">&gt;</span> <span class="n">map</span><span class="p">){</span>
 		<span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">number</span> <span class="p">:</span> <span class="n">numberArray</span><span class="p">){</span>
 			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">number</span><span class="p">));</span>
 		<span class="p">}</span>
@@ -509,7 +509,7 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>-------------------------
-class [LREPL.$JShell$12BE$Car; 9
+class [LREPL.$JShell$12BH$Car; 9
 Vehicle: Car listed by brand
 Honda
 Toyota
@@ -531,7 +531,7 @@ Chevrolet
 Hyundai
 Ford
 -------------------------
-class [LREPL.$JShell$12BE$Car; 9
+class [LREPL.$JShell$12BH$Car; 9
 Vehicle: Car listed by model
 Civic
 Mirai
@@ -553,7 +553,7 @@ Some Car Model
 Some Card Model
 Voyager
 -------------------------
-class [LREPL.$JShell$12BE$Car; 9
+class [LREPL.$JShell$12BH$Car; 9
 Vehicle: Car listed by capacity
 5
 5
@@ -634,12 +634,6 @@ Vehicle: Car listed by capacity
     <span class="c1">//     return (sumTime / simRuns) / 1000000;</span>
 
     <span class="c1">// }</span>
-
-    <span class="kd">public</span> <span class="n">Vehicle</span><span class="o">[]</span> <span class="nf">sortVehicles</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Vehicle</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span><span class="p">){</span>
-        <span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span> <span class="o">=</span> <span class="n">Car</span><span class="p">.</span><span class="na">cars</span><span class="p">();</span>
-        <span class="n">Car</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">brand</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">cars</span><span class="p">;</span>
-    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -696,6 +690,53 @@ Vehicle: Car listed by capacity
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sortVehicles</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="n">Car</span><span class="o">[]</span> <span class="n">cars</span> <span class="o">=</span> <span class="n">Car</span><span class="p">.</span><span class="na">cars</span><span class="p">();</span>
+        <span class="n">Car</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Car</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">brand</span><span class="p">);</span>
+        <span class="n">Car</span><span class="p">.</span><span class="na">printCars</span><span class="p">(</span><span class="n">Car</span><span class="p">.</span><span class="na">carNumberList</span><span class="p">(</span><span class="n">cars</span><span class="p">),</span> <span class="n">Car</span><span class="p">.</span><span class="na">registrationNumber</span><span class="p">(</span><span class="n">cars</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Main</span><span class="p">.</span><span class="na">sortVehicles</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>null
+null
+null
+null
+null
+null
+null
+null
+null
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -933,7 +974,7 @@ Vehicle: Car listed by capacity
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HashTester</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HashStuff</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
@@ -1045,7 +1086,7 @@ Vehicle: Car listed by capacity
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">HashTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">HashStuff</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -1062,35 +1103,35 @@ Vehicle: Car listed by capacity
 hash map look up
 --------------------------------
 Enter a number to search for: 
-487 ns
-1188 ns
-296 ns
-500 ns
-329 ns
-558 ns
+16059 ns
+658 ns
+169 ns
+431 ns
+168 ns
+368 ns
 257 ns
-113 ns
-143 ns
-403 ns
-188 ns
-148 ns
-Average: 330.9 ns (excluding shortest time: 113.0 ns and, longest time 1188.0 ns)
+808 ns
+191 ns
+174 ns
+195 ns
+174 ns
+Average: 342.5 ns (excluding shortest time: 168.0 ns and, longest time 16059.0 ns)
 --------------------------------
 binary search
 --------------------------------
-627 ns
-19158 ns
-368 ns
-244 ns
-197 ns
-194 ns
-189 ns
-172 ns
-219 ns
-296 ns
-230 ns
-181 ns
-Average: 274.5 ns (excluding shortest time: 172.0 ns and, longest time 19158.0 ns)
+532 ns
+472 ns
+547 ns
+156 ns
+207 ns
+207 ns
+209 ns
+198 ns
+209 ns
+275 ns
+167 ns
+202 ns
+Average: 267.8 ns (excluding shortest time: 156.0 ns and, longest time 547.0 ns)
 </pre>
 </div>
 </div>
